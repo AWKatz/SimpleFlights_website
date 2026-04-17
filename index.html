@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <title>SimpleFlights | The Simple Alternative</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #020024; color: #f8fafc; scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .accent-gradient { background: linear-gradient(135deg, #3b82f6 0%, #2dd4bf 100%); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .device-shadow { box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.2), 0 25px 50px -12px rgba(59, 130, 246, 0.2); }
+        .custom-scrollbar::-webkit-scrollbar { height: 8px; /* Height of horizontal scrollbar */ display: block; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #3b82f6; /* Blue-400 to match your theme */ border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #60a5fa; /* Lighter blue on hover */ }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-lg border-b border-slate-800/50">
+        <div class="flex justify-between items-center p-4 max-w-7xl mx-auto">
+            <div class="text-xl font-bold tracking-tighter flex items-center gap-2">
+                <i class="fa-solid fa-plane-tail text-blue-400"></i> SimpleFlights <img src="images/app_icon_48.png"></img>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
+                <a href="#features" class="hover:text-white transition">Features</a>
+                <a href="#showcase" class="hover:text-white transition">Gallery</a>
+                <a href="#pricing" class="hover:text-white transition">TL;DR</a>
+                <a href="./devlog.html" class="hover:text-white transition">DevLog</a>
+            </div>
+            <div class="flex gap-4">
+                <a href="#download" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition">Download</a>
+            </div>
+        </div>
+    </nav>
+
+    <!--HOOK AND LINKS-->
+    <section class="max-w-7xl mx-auto px-6 pt-20 pb-24 flex flex-col lg:flex-row items-center gap-12">
+        <div class="lg:w-1/2 space-y-8 text-center lg:text-left">
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight">
+                Your logbook.<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Your flights.</span><br>Simplified.
+            </h1>
+            <p class="text-lg text-slate-400 max-w-lg mx-auto lg:mx-0">
+                SimpleFlights began as inistially as set of Apple Shortcut actions in a lengthy workflow that I created to help me fill out my logbook and to share my license training progress with friends and family, 
+                but has since evolved into a standalone Flutter app once I realized that I wanted to have more capabilities to help suppliment my PTR, share flight updates, and help my flight instructors get more insight into my flights as a student pilot.  
+            </p>
+            
+            <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                <a href="#" class="transition transform hover:scale-105">
+                    <img src="images/app-store-badge.svg" alt="Download on App Store" class="h-12">
+                </a>
+                <a href="#" class="transition transform hover:scale-105">
+                    <img src="images/mac-app-store-badge.svg" alt="Download on Mac App Store" class="h-12">
+                </a>
+                <a href="#" class="transition transform hover:scale-105">
+                    <img src="images/google-play-badge.svg" alt="Get it on Google Play" class="h-12">
+                </a>
+                <a href="#" class="transition transform hover:scale-105">
+                    <img src="images/windows-store-badge.svg" alt="Get it on Windows" class="h-12">
+                </a>
+            </div>
+        </div>
+
+        <div class="lg:w-1/2 relative flex justify-center">
+            <div class="relative z-10 w-72 h-[580px] bg-slate-900 rounded-[3rem] border-[10px] border-slate-800 shadow-2xl overflow-hidden">
+                <img src="images/hero-phone-ui.mp4" alt="SimpleFlights Dashboard" class="w-full h-full object-cover">
+            </div>
+
+            <div class="absolute -right-8 top-1/4 w-[600px] h-[400px] border-slate-800 shadow-2xl rounded-3xl xl:block -rotate-6 border-[10px] backdrop-blur-sm overflow-hidden">
+                <img src="images/hero-tablet-ui.png" alt="Tablet View" class="w-full h-full object-cover opacity-60">
+            </div>
+        </div>
+    </section>
+
+
+    <!--MAIN FEATURES-->
+    <section id="features" class="max-w-7xl mx-auto px-6 py-24">
+        <div class="mb-12 text-center">
+        <h2 class="text-3xl font-bold">Whether you're in the cockpit or on the couch...</h2>
+        <p class="text-slate-400">Here are some of the things you can do with SimpleFlights!</p>
+        </div>    
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">    
+            <div class="glass p-10 rounded-[2.5rem] border-cyan-500/10">
+                <i class="fa-solid fa-satellite text-cyan-400 text-2xl mb-6"></i>
+                <h3 class="text-2xl font-bold mb-3">Record Key Flight Details</h3>
+                <p class="text-slate-400 text-sm">SimpleFlights makes it easy to log your flights, ICAO codes, Hobbs/Air/Flight times, and flight paths at 1Hz precision. After the flight, you can then playback the flight path overlayed on the map!</p>
+                <!-- <img src="images/feature-storage-stats.png" class="mt-8 rounded-lg border border-white/10" alt="Storage Management"> -->
+            </div>
+        
+            <div class="glass p-10 rounded-[2.5rem] border-emerald-500/10">
+                <i class="fa-solid fa-plane text-emerald-400 text-2xl mb-6"></i>
+                <h3 class="text-2xl font-bold mb-3">Manage Your Fleet</h3>
+                <p class="text-slate-400 text-sm">Keey track of owned or rented aircraft that you fly. SimpleFlights makes it easy for you to manage and update fleet info to supplement your PTR or logbook.</p>
+                <!-- <img src="images/feature-storage-stats.png" class="mt-8 rounded-lg border border-white/10" alt="Storage Management"> -->
+            </div>
+            
+            <div class="glass p-10 rounded-[2.5rem] border-purple-500/10">
+                <i class="fa-solid fa-database text-purple-400 text-2xl mb-6"></i>
+                <h3 class="text-2xl font-bold mb-3">420KB/Hr Efficiency</h3>
+                <p class="text-slate-400 text-sm">Optimized GPS thining means years of flight logs take up less space than a single high-res photo, when your storage starts to matter, we make it easy to manage your on-device app data without compromising logs.</p>
+                <!-- <img src="images/feature-storage-stats.png" class="mt-8 rounded-lg border border-white/10" alt="Storage Management"> -->
+            </div>
+
+            <div class="glass p-10 rounded-[2.5rem] border-red-500/10">
+                <i class="fa-solid fa-podcast text-red-400 text-2xl mb-6"></i>
+                <h3 class="text-2xl font-bold mb-3">Stream Your Flight Live!</h3>
+                    <p class="text-slate-400 leading-relaxed">Share a live view of your current flight to a passenger in the cabin, or over a TLS secured stream to someone following along from home. Your flightpath is overlayed onto an openstreetview map with a robust set of highway, railway, waterway data, VOR's and Airports able to be selectively toggled to view.</p>
+                <!-- <img src="images/feature-storage-stats.png" class="mt-8 rounded-lg border border-white/10" alt="Storage Management"> -->
+            </div>
+
+            <div class="glass p-10 rounded-[2.5rem] border-orange-500/10">
+                <i class="fa-solid fa-map-location text-orange-400 text-2xl mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-3">Planning an XC?</h3>
+                    <p class="text-slate-400 leading-relaxed">SimpleFLights leverages and integrates public and opensource data to pull METAR, TAF, Frequencies, Runway orientations and lengths, navigation aides into one easy to find place. Whether you're enroute, or on the ramp you can plan accordingly.</p>               
+                <!-- <img src="images/feature-storage-stats.png" class="mt-8 rounded-lg border border-white/10" alt="Storage Management"> -->
+            </div>
+
+            <div class="glass p-10 rounded-[2.5rem] border-yellow-500/10">
+                <i class="fa-solid fa-mobile text-yellow-400 text-2xl mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-3">"Text me when you land!"</h3>
+                    <p class="text-slate-400 leading-relaxed">Does your instructor, friend or family member want to know you've safely arrived at your destination? With one tap you can share your key flight info into a ready to send RCS with the option to include a map view of your flight path!</p>               
+                <!-- <img src="images/feature-storage-stats.png" class="mt-8 rounded-lg border border-white/10" alt="Storage Management"> -->
+            </div>
+        </div>
+        <br>
+        <h2 class="text-2xl font-bold text-center pt-10">With plenty of features already coming soon to make your flights simple!</h2>
+    </section>
+
+    <!--SCREENSHOTS AND GIFS-->
+    <section id="showcase" class="bg-slate-900/30 py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold">Gallery</h2>
+                <p class="text-slate-400">Taken from current v0.81 build of the iOS and Android apps</p>
+            </div>
+
+            <div class="flex overflow-x-auto gap-8 custom-scrollbar pb-10">
+
+            <div class="min-w-[320px] group">
+                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/hero-phone-ui.mp4', 'Airport Lookup Demo')">
+                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                    <img src="images/hero-phone-ui.mp4" alt="Airport Lookup Demo" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="font-bold text-center">Manage Your Fleet</h3>
+                    <p class="text-slate-400"></p>
+                </div>
+            </div>
+                
+            <div class="min-w-[320px] group">
+                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/screenshot-live-tracker.png', 'Shared flight tracking')">
+                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                        <img src="images/screenshot-live-tracker.png" alt="Live Tracker" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="font-bold text-center">Keep Log of Your Flights</h3>
+                    <p class="text-slate-400"></p>
+                </div> 
+            </div>
+
+            <div class="min-w-[320px] group">
+                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/share-sheet.png', 'Easy post-flight sharing')">
+                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                        <img src="images/share-sheet.png" alt="Share Sheet" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="font-bold text-center">After Flight Sharing</h3>
+                    <p class="text-slate-400"></p>
+                </div>
+            </div>
+                
+            <div class="min-w-[320px] group">
+                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/flight-playback.mp4', 'Playback your flight')">
+                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                        <img src="images/flight-playback.MP4" alt="Animated Map Playback" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="font-bold text-center">Flight History Playback</h3>
+                    <p class="text-slate-400"></p>
+                </div>
+            </div>
+
+            <div class="min-w-[320px] group">
+                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/flight-playback.mp4', 'Playback your flight')">
+                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                        <img src="images/flight-playback.MP4" alt="Animated Map Playback" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="font-bold text-center">Flight Planning</h3>
+                    <p class="text-slate-400"></p>
+                </div>
+            </div>
+
+            <div class="min-w-[320px] group">
+                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/flight-playback.mp4', 'Playback your flight')">
+                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                        <img src="images/flight-playback.MP4" alt="Animated Map Playback" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="font-bold text-center">Flight History Playback</h3>
+                    <p class="text-slate-400"></p>
+                </div>
+            </div>
+
+            <div class="min-w-[320px] group">
+                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/fleet-management.png', 'View and edit your aircraft info')">
+                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                        <img src="images/fleet-management.png" alt="Fleet Management" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="font-bold text-center">Manage The Aircraft You Fly</h3>
+                    <p class="text-slate-400">Quickly access and manage details about the planes you fly, and keep track key info like HOBBs times and maintenance notes.</p>
+                </div>
+        </div>   
+        </div> 
+    </section>
+
+    <section id="pricing" class="max-w-4xl mx-auto px-6 py-24 text-center">
+        <h2 class="text-4xl font-extrabold mb-6">No Subscriptions or Ads. Ever.</h2>
+        <p class="text-slate-400 mb-12">A one-time purchase gives you lifetime access on all your devices. Your data isn't collected and is stored locally on YOUR device.</p>
+        
+        <div class="inline-flex gap-8 items-center bg-slate-900 border border-slate-800 rounded-3xl p-8">
+            <div class="text-left">
+                <p class="text-xs uppercase text-slate-500 font-bold mb-1">SimpleFlights</p>
+                <p class="text-4xl font-black text-emerald-400">Onetime Purchase $7.99CAD</p>
+            </div>
+            <div class="h-12 w-[1px] bg-slate-800"></div>
+            <div class="text-left opacity-40">
+                <p class="text-xs uppercase text-slate-500 font-bold mb-1">The BIG Apps</p>
+                <p class="text-2xl font-light">$180CAD/year</p>
+            </div>
+        </div>
+    </section>
+
+    <!--MORE HOOKS AND LINKS-->
+    <section id="download" class="max-w-7xl mx-auto px-6 py-24 border-t border-slate-900">
+        <div class="flex flex-col items-center gap-12">
+            <div class="text-center w-full">
+                <h2 class="text-3xl font-bold mb-2">Log your flights.</h2>
+                <p class="text-slate-400">Logging mode available for Android and iOS devices.</p>
+                <br>
+                <div class="flex flex-wrap gap-4 justify-center">
+                <button class="bg-slate-800 hover:bg-slate-700 px-6 py-2 rounded-xl flex items-center gap-3 font-bold transition">
+                    <i class="fa-brands fa-apple text-blue-400"></i> iOS
+                </button>
+                <button class="bg-slate-800 hover:bg-slate-700 px-6 py-2 rounded-xl flex items-center gap-3 font-bold transition">
+                    <i class="fa-brands fa-apple text-blue-400"></i> macOS
+                </button>
+                <button class="bg-slate-800 hover:bg-slate-700 px-6 py-2 rounded-xl flex items-center gap-3 font-bold transition">
+                    <i class="fa-brands fa-apple text-blue-400"></i> iPadOS
+                </button>
+                <button class="bg-slate-800 hover:bg-slate-700 px-6 py-2 rounded-xl flex items-center gap-3 font-bold transition">
+                    <i class="fa-brands fa-android text-blue-400"></i> Android
+                </button>
+                </div>
+                <br>
+                <h2 class="text-3xl font-bold mb-2">Track flights from any platform.</h2>
+                <p class="text-slate-400">Viewer mode available for Android, iOS, and Windows.</p>
+                <br>
+                <div class="flex flex-wrap gap-4 justify-center">
+                <button class="bg-slate-800 hover:bg-slate-700 px-6 py-2 rounded-xl flex items-center gap-3 font-bold transition">
+                    <i class="fa-brands fa-android text-blue-400"></i> AndroidTV
+                </button>
+                <button class="bg-slate-800 hover:bg-slate-700 px-6 py-2 rounded-xl flex items-center gap-3 font-bold transition">
+                    <i class="fa-brands fa-windows text-blue-400"></i> Windows
+                </button>
+                </div>
+            </div>
+    </section>
+
+    <footer class="max-w-7xl mx-auto px-6 py-12 text-center text-slate-600 text-sm">
+        <p class="mb-4 font-bold text-slate-400">SimpleFlights</p>
+        <div class="flex justify-center gap-6 mb-8">
+            <a href="mailto:aaron@simpleflights.ca" class="hover:text-white transition">Need Support? Have a Suggestion?</a>
+        </div>
+        <p>&copy; 2026 SimpleFlights. The simple alternative.</p>
+    </footer>
+
+<div id="imageModal" class="fixed inset-0 z-[100] hidden bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4 md:p-10 cursor-zoom-out">
+    <button class="absolute top-6 right-6 text-white text-3xl hover:text-blue-400 transition">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+    
+    <img id="modalImage" src="" alt="Full size preview" class="max-w-full max-h-full rounded-2xl shadow-2xl border border-white/10 object-contain">
+    
+    <div class="absolute bottom-10 left-0 right-0 text-center">
+        <p id="modalCaption" class="text-white font-bold text-lg"></p>
+    </div>
+</div>
+
+</body>
+<script>
+const slider = document.querySelector('.custom-scrollbar');
+ let isDown = false;
+ let startX;
+ let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener('mouseleave', () => {
+    isDown = false;
+});
+slider.addEventListener('mouseup', () => {
+    isDown = false;
+});
+slider.addEventListener('mousemove', (e) => {
+    if(!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2; //scroll-fast
+    slider.scrollLeft = scrollLeft - walk;
+});
+const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const modalCaption = document.getElementById('modalCaption');
+
+    function openModal(src, caption) {
+        modal.classList.remove('hidden');
+        modalImg.src = src;
+        modalCaption.innerText = caption;
+        // Prevent background scrolling when modal is open
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Close modal when clicking anywhere on the background or the 'X'
+    modal.onclick = function() {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    };
+
+    // Close on 'Escape' key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === "Escape") {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    });
+</script>
+</html>
