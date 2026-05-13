@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — SimpleFlights</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #fff;
+      padding: 0 16px 80px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 48px 0 32px;
+      border-bottom: 2px solid #0071e3;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0071e3;
+      margin-bottom: 6px;
+    }
+
+    header p {
+      font-size: 0.9375rem;
+      color: #555;
+    }
+
+    .form-group {
+      margin-bottom: 22px;
+    }
+
+    label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 6px;
+      letter-spacing: 0.01em;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 11px 14px;
+      font-family: inherit;
+      font-size: 1rem;
+      color: #1a1a1a;
+      background: #f7f7f7;
+      border: 1.5px solid #ddd;
+      border-radius: 10px;
+      outline: none;
+      transition: border-color 0.15s, background 0.15s;
+      -webkit-appearance: none;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #0071e3;
+      background: #fff;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 130px;
+      line-height: 1.6;
+    }
+
+    .char-count {
+      text-align: right;
+      font-size: 0.8125rem;
+      color: #888;
+      margin-top: 4px;
+    }
+
+    .char-count.near-limit { color: #e07800; }
+    .char-count.at-limit   { color: #d93025; }
+
+    select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 36px;
+      cursor: pointer;
+    }
+
+    button[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      background: #0071e3;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+      margin-top: 8px;
+    }
+
+    button[type="submit"]:hover  { background: #0062c4; }
+    button[type="submit"]:active { transform: scale(0.98); }
+
+    .success-banner {
+      display: none;
+      background: #eaffea;
+      border: 1.5px solid #34a853;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 28px;
+      color: #1a6b2a;
+      font-size: 0.9375rem;
+    }
+
+    .success-banner.visible { display: block; }
+
+    footer {
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid #e5e5e5;
+      font-size: 0.875rem;
+      color: #666;
+    }
+
+    footer a { color: #0071e3; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (prefers-color-scheme: dark) {
+      body { background: #111; color: #e5e5e5; }
+      header h1 { color: #4fa3f7; }
+      header { border-color: #4fa3f7; }
+      header p { color: #aaa; }
+      label { color: #ccc; }
+      input[type="text"],
+      input[type="email"],
+      textarea,
+      select {
+        background: #1e1e1e;
+        border-color: #333;
+        color: #e5e5e5;
+      }
+      input:focus, textarea:focus, select:focus {
+        border-color: #4fa3f7;
+        background: #252525;
+      }
+      .char-count { color: #666; }
+      button[type="submit"] { background: #4fa3f7; color: #000; }
+      button[type="submit"]:hover { background: #3a8edc; }
+      .success-banner { background: #0d2e14; border-color: #34a853; color: #6fcf97; }
+      footer { border-color: #333; color: #888; }
+      footer a { color: #4fa3f7; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>Contact Us</h1>
+    <p>Support requests, bug reports, and general inquiries — we'll get back to you as soon as possible.</p>
+  </header>
+
+  <div class="success-banner" id="successBanner">
+    Your mail client should have opened with your message pre-filled — just hit Send.
+    If nothing opened, email us directly at
+    <a href="mailto:aaron@simpleflights.ca">aaron@simpleflights.ca</a>.
+  </div>
+
+  <form id="contactForm" novalidate>
+
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Your name" required autocomplete="name" />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="you@example.com" required autocomplete="email" />
+    </div>
+
+    <div class="form-group">
+      <label for="type">Inquiry type</label>
+      <select id="type">
+        <option value="Support request">Support / Help</option>
+        <option value="Bug report">Bug Report</option>
+        <option value="Feature request">Feature Request</option>
+        <option value="Press inquiry">Press / Media</option>
+        <option value="General inquiry">Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" maxlength="500"
+        placeholder="Describe your issue or question..." required></textarea>
+      <div class="char-count" id="charCount">0 / 500</div>
+    </div>
+
+    <button type="submit">Open Email Client</button>
+
+  </form>
+
+  <footer>
+    <p>You can also reach us directly at
+    <a href="mailto:aaron@simpleflights.ca">aaron@simpleflights.ca</a><br />
+    &copy; 2025 Aaron Katz &nbsp;·&nbsp;
+    <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="terms.html">Terms of Service</a></p>
+  </footer>
+
+</div>
+
+<script>
+  const textarea  = document.getElementById('message');
+  const charCount = document.getElementById('charCount');
+  const form      = document.getElementById('contactForm');
+  const banner    = document.getElementById('successBanner');
+
+  textarea.addEventListener('input', () => {
+    const n = textarea.value.length;
+    charCount.textContent = n + ' / 500';
+    charCount.className = 'char-count' +
+      (n >= 500 ? ' at-limit' : n >= 420 ? ' near-limit' : '');
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name    = document.getElementById('name').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const type    = document.getElementById('type').value;
+    const message = textarea.value.trim();
+
+    if (!name || !email || !message) {
+      const first = !name ? 'name' : !email ? 'email' : 'message';
+      document.getElementById(first).focus();
+      return;
+    }
+
+    const subject = encodeURIComponent('SimpleFlights — ' + type);
+    const body    = encodeURIComponent(
+      'Name: '    + name    + '\n' +
+      'Email: '   + email   + '\n' +
+      'Type: '    + type    + '\n\n' +
+      message
+    );
+
+    window.location.href =
+      'mailto:aaron@simpleflights.ca?subject=' + subject + '&body=' + body;
+
+    banner.classList.add('visible');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>
