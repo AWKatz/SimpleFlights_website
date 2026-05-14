@@ -1,261 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms of Service — SimpleFlights</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      color: #1a1a1a;
-      background: #fff;
-      padding: 0 16px 80px;
-    }
-
-    .container {
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    header {
-      padding: 48px 0 32px;
-      border-bottom: 2px solid #0071e3;
-      margin-bottom: 40px;
-    }
-
-    header h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #0071e3;
-      margin-bottom: 6px;
-    }
-
-    header .meta {
-      font-size: 0.875rem;
-      color: #666;
-    }
-
-    h2 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #1a1a1a;
-      margin: 36px 0 10px;
-      padding-bottom: 4px;
-      border-bottom: 1px solid #e5e5e5;
-    }
-
-    p { margin-bottom: 14px; }
-
-    ul {
-      margin: 10px 0 14px 24px;
-    }
-
-    ul li { margin-bottom: 6px; }
-
-    .callout {
-      background: #fff8e6;
-      border-left: 4px solid #f0a500;
-      border-radius: 0 8px 8px 0;
-      padding: 14px 18px;
-      margin: 20px 0;
-      font-size: 0.9375rem;
-    }
-
-    .callout strong { color: #b07800; }
-
-    .warning {
-      background: #fff0f0;
-      border-left: 4px solid #d93025;
-      border-radius: 0 8px 8px 0;
-      padding: 14px 18px;
-      margin: 20px 0;
-      font-size: 0.9375rem;
-    }
-
-    .warning strong { color: #d93025; }
-
-    a { color: #0071e3; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    footer {
-      margin-top: 60px;
-      padding-top: 24px;
-      border-top: 1px solid #e5e5e5;
-      font-size: 0.875rem;
-      color: #666;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      body { background: #111; color: #e5e5e5; }
-      header h1 { color: #4fa3f7; }
-      header { border-color: #4fa3f7; }
-      h2 { color: #e5e5e5; border-color: #333; }
-      .callout { background: #2a2010; border-color: #f0a500; }
-      .callout strong { color: #f0a500; }
-      .warning { background: #2a1010; border-color: #d93025; }
-      .warning strong { color: #f07070; }
-      a { color: #4fa3f7; }
-      footer { border-color: #333; color: #888; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <title>Terms of Service | SimpleFlights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #020024; color: #f8fafc; scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    </style>
 </head>
-<body>
-<div class="container">
+<body class="antialiased">
 
-  <header>
-    <h1>Terms of Service</h1>
-    <p class="meta">SimpleFlights &nbsp;·&nbsp; Effective date: May 13, 2025 &nbsp;·&nbsp; Last updated: May 13, 2025</p>
-  </header>
+    <nav class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-lg border-b border-slate-800/50">
+        <div class="flex justify-between items-center p-4 max-w-7xl mx-auto">
+            <a href="./index.html" class="text-xl font-bold tracking-tighter flex items-center gap-2 text-white hover:text-blue-400 transition">
+                <i class="fa-solid fa-plane-tail text-blue-400"></i> SimpleFlights
+            </a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
+                <a href="./index.html#features" class="hover:text-white transition">Features</a>
+                <a href="./index.html#showcase" class="hover:text-white transition">Gallery</a>
+                <a href="./index.html#pricing" class="hover:text-white transition">TL;DR</a>
+                <a href="./devlog.html" class="hover:text-white transition">DevLog</a>
+                <a href="./contact.html" class="hover:text-white transition">Contact Me</a>
+                <a href="./privacy-policy.html" class="hover:text-white transition">Privacy</a>
+                <a href="./tos.html" class="text-white transition">TOS</a>
+            </div>
+            <div class="flex gap-4">
+                <a href="./index.html#download" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition">Download</a>
+            </div>
+        </div>
+    </nav>
 
-  <div class="warning">
-    <strong>Important aviation notice:</strong> SimpleFlights is not designed as a replacement 
-    for situational awareness, or a replacement for official flight information sources. 
-    It is <strong>not certified for navigation and should not be used as the primary navigation 
-    instrument.</strong> Always consult official aviation charts, certified avionics, and 
-    current NOTAMs for all flight operations.
-  </div>
+    <!-- Header -->
+    <section class="max-w-4xl mx-auto px-6 pt-16 pb-8">
+        <div class="flex items-center gap-3 text-slate-400 text-sm mb-6">
+            <a href="./index.html" class="hover:text-white transition">Home</a>
+            <i class="fa-solid fa-chevron-right text-xs"></i>
+            <span class="text-white">Terms of Service</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+            Terms of <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Service</span>
+        </h1>
+        <p class="text-slate-400">Effective date: May 13, 2025 &nbsp;·&nbsp; Last updated: May 13, 2025</p>
+    </section>
 
-  <h2>1. Acceptance of Terms</h2>
-  <p>By downloading, installing, or using SimpleFlights ("the App"), you agree to be bound by
-  these Terms of Service ("Terms"). If you do not agree to these Terms, do not install or use
-  the App.</p>
-  <p>These Terms form a legal agreement between you and <strong>Aaron Katz</strong>, an
-  individual developer based in Ontario, Canada ("Developer", "we", "us", or "our").</p>
+    <!-- Aviation warning -->
+    <section class="max-w-4xl mx-auto px-6 pb-6">
+        <div class="glass rounded-2xl p-6 border-red-500/20 flex gap-4 items-start" style="border-color: rgba(239,68,68,0.2);">
+            <i class="fa-solid fa-triangle-exclamation text-red-400 text-xl mt-1 flex-shrink-0"></i>
+            <div>
+                <p class="font-semibold text-white mb-1">Important Aviation Notice</p>
+                <p class="text-slate-400 text-sm leading-relaxed">SimpleFlights is designed for situational awareness, flight logging, and entertainment purposes only. It is <strong class="text-white">not certified for navigation and must not be used as a primary navigation instrument.</strong> Always consult official aviation charts, certified avionics, and current NOTAMs for all flight operations.</p>
+            </div>
+        </div>
+    </section>
 
-  <h2>2. License</h2>
-  <p>Subject to your compliance with these Terms, the Developer grants you a limited,
-  non-exclusive, non-transferable, revocable license to install and use the App on devices
-  you own or control, solely for your personal, non-commercial purposes.</p>
-  <p>This license does not include the right to:</p>
-  <ul>
-    <li>Copy, modify, or distribute the App or any portion of it</li>
-    <li>Reverse engineer, decompile, or disassemble the App</li>
-    <li>Remove or obscure any proprietary notices within the App</li>
-    <li>Use the App to build a competing product or service</li>
-    <li>Sublicense or resell access to the App</li>
-  </ul>
+    <!-- Content -->
+    <section class="max-w-4xl mx-auto px-6 pb-24 space-y-6">
 
-  <h2>3. Purchase &amp; Refunds</h2>
-  <p>SimpleFlights is a paid application purchased through the Apple App Store or Google Play
-  Store. All purchases are subject to the applicable store's terms and refund policies.
-  The Developer does not independently process payments or issue refunds outside of store
-  policies. For refund requests, please contact Apple or Google directly through their
-  standard support channels.</p>
+        <div class="glass rounded-2xl p-8">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="text-blue-400 text-sm font-mono">01</span> Acceptance of Terms</h2>
+            <p class="text-slate-400 text-sm leading-relaxed mb-3">By downloading, installing, or using SimpleFlights ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not install or use the App.</p>
+            <p class="text-slate-400 text-sm leading-relaxed">These Terms form a legal agreement between you and <span class="text-white font-semibold">Aaron Katz</span>, an individual developer based in Ontario, Canada ("Developer", "we", "us", or "our").</p>
+        </div>
 
-  <h2>4. Aviation Safety Disclaimer</h2>
-  <div class="callout">
-    <strong>Read carefully.</strong> This section limits the Developer's liability with
-    respect to aviation use.
-  </div>
-  <p>SimpleFlights provides flight tracking, route planning, and situational awareness features
-  intended as supplemental tools only. The App:</p>
-  <ul>
-    <li>Is <strong>not</strong> a Transport Canada, FAA, or EASA-approved navigation system</li>
-    <li>Is <strong>not</strong> a substitute for paper charts, certified avionics, or official
-    weather and NOTAM briefings</li>
-    <li>May display inaccurate, delayed, or incomplete position, airspace, or terrain
-    information</li>
-    <li>Relies on consumer GPS hardware, which may be unavailable or inaccurate</li>
-  </ul>
-  <p>You are solely responsible for the safe conduct of any flight. The Developer expressly
-  disclaims all liability for any accident, incident, injury, death, property damage, or
-  regulatory violation arising from reliance on information provided by the App.</p>
+        <div class="glass rounded-2xl p-8">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="text-blue-400 text-sm font-mono">02</span> License</h2>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4">Subject to your compliance with these Terms, the Developer grants you a limited, non-exclusive, non-transferable, revocable license to install and use the App on devices you own or control, solely for your personal, non-commercial purposes.</p>
+            <p class="text-slate-400 text-sm mb-3">This license does not include the right to:</p>
+            <ul class="text-slate-400 text-sm space-y-2">
+                <li class="flex items-start gap-3"><i class="fa-solid fa-xmark text-red-400 mt-0.5 flex-shrink-0"></i> Copy, modify, or distribute the App or any portion of it</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-xmark text-red-400 mt-0.5 flex-shrink-0"></i> Reverse engineer, decompile, or disassemble the App</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-xmark text-red-400 mt-0.5 flex-shrink-0"></i> Remove or obscure any proprietary notices within the App</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-xmark text-red-400 mt-0.5 flex-shrink-0"></i> Use the App to build a competing product or service</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-xmark text-red-400 mt-0.5 flex-shrink-0"></i> Sublicense or resell access to the App</li>
+            </ul>
+        </div>
 
-  <h2>5. Permitted Use</h2>
-  <p>You may use the App for:</p>
-  <ul>
-    <li>Recording and reviewing personal flight logs</li>
-    <li>Supplemental in-cockpit situational awareness</li>
-    <li>Flight planning and pre-flight review</li>
-    <li>Sharing your flight progress with friends, family, or passengers</li>
-  </ul>
-  <p>You may not use the App for any unlawful purpose or in violation of any applicable
-  aviation regulations, including regulations issued by the FAA, Transport Canada, EASA, or
-  any other aviation authority having jurisdiction over your operations.</p>
+        <div class="glass rounded-2xl p-8">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="text-blue-400 text-sm font-mono">03</span> Purchase &amp; Refunds</h2>
+            <p class="text-slate-400 text-sm leading-relaxed">SimpleFlights is a paid application purchased through the Apple App Store or Google Play Store. All purchases are subject to the applicable store's terms and refund policies. The Developer does not independently process payments or issue refunds outside of store policies. For refund requests, please contact Apple or Google directly through their standard support channels.</p>
+        </div>
 
-  <h2>6. User-Generated Content &amp; Sharing</h2>
-  <p>When you share a live flight using the App's sharing features, you represent that you
-  have the right to share that data and that doing so does not violate any applicable law or
-  third-party rights. You are solely responsible for any content you share and for selecting
-  recipients appropriately.</p>
+        <div class="glass rounded-2xl p-8">
+            <h2 class="text-xl font-bold mb-6 flex items-center gap-3"><span class="text-blue-400 text-sm font-mono">04</span> Aviation Safety Disclaimer</h2>
+            <div class="bg-amber-500/5 border border-amber-500/20 rounded-xl p-4 mb-6">
+                <p class="text-amber-400 text-sm font-semibold flex items-center gap-2"><i class="fa-solid fa-circle-info"></i> Read carefully — this section limits the Developer's liability with respect to aviation use.</p>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4">SimpleFlights provides flight tracking, route planning, and situational awareness features intended as supplemental tools only. The App:</p>
+            <ul class="text-slate-400 text-sm space-y-2 mb-4">
+                <li class="flex items-start gap-3"><i class="fa-solid fa-xmark text-red-400 mt-0.5 flex-shrink-0"></i> Is <span class="text-white font-semibold">not</span> a Transport Canada, FAA, or EASA-approved navigation system</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-xmark text-red-400 mt-0.5 flex-shrink-0"></i> Is <span class="text-white font-semibold">not</span> a substitute for paper charts, certified avionics, or official weather and NOTAM briefings</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-xmark text-red-400 mt-0.5 flex-shrink-0"></i> May display inaccurate, delayed, or incomplete position, airspace, or terrain information</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-xmark text-red-400 mt-0.5 flex-shrink-0"></i> Relies on consumer GPS hardware, which may be unavailable or inaccurate</li>
+            </ul>
+            <p class="text-slate-400 text-sm leading-relaxed">You are solely responsible for the safe conduct of any flight. The Developer expressly disclaims all liability for any accident, incident, injury, death, property damage, or regulatory violation arising from reliance on information provided by the App.</p>
+        </div>
 
-  <h2>7. Intellectual Property</h2>
-  <p>The App, including its design, code, icons, and all associated content, is owned by
-  Aaron Katz and is protected by copyright and other intellectual property laws. "SimpleFlights"
-  and associated logos are trademarks of Aaron Katz. Nothing in these Terms transfers any
-  ownership rights to you.</p>
+        <div class="glass rounded-2xl p-8">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="text-blue-400 text-sm font-mono">05</span> Permitted Use</h2>
+            <p class="text-slate-400 text-sm mb-3">You may use the App for:</p>
+            <ul class="text-slate-400 text-sm space-y-2 mb-4">
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-0.5 flex-shrink-0"></i> Recording and reviewing personal flight logs</li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-0.5 flex-shrink-0"></i> Supplemental in-cockpit situational awareness</li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-0.5 flex-shrink-0"></i> Flight planning and pre-flight review</li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-0.5 flex-shrink-0"></i> Sharing your flight progress with friends, family, or passengers</li>
+            </ul>
+            <p class="text-slate-400 text-sm leading-relaxed">You may not use the App for any unlawful purpose or in violation of any applicable aviation regulations, including regulations issued by Transport Canada, the FAA, EASA, or any other aviation authority having jurisdiction over your operations.</p>
+        </div>
 
-  <h2>8. Privacy</h2>
-  <p>Your use of the App is also governed by our
-  <a href="privacy-policy.html">Privacy Policy</a>, which is incorporated into these Terms by
-  reference.</p>
+        <div class="glass rounded-2xl p-8">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="text-blue-400 text-sm font-mono">06</span> User-Generated Content &amp; Sharing</h2>
+            <p class="text-slate-400 text-sm leading-relaxed">When you share a live flight using the App's sharing features, you represent that you have the right to share that data and that doing so does not violate any applicable law or third-party rights. You are solely responsible for any content you share and for selecting recipients appropriately.</p>
+        </div>
 
-  <h2>9. Disclaimer of Warranties</h2>
-  <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
-  PARTICULAR PURPOSE, ACCURACY, OR NON-INFRINGEMENT. THE DEVELOPER DOES NOT WARRANT THAT THE
-  APP WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.</p>
-  <p>GPS accuracy, map data completeness, and airspace information accuracy are not
-  guaranteed. Do not rely on this App for safety-of-life decisions.</p>
+        <div class="glass rounded-2xl p-8">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="text-blue-400 text-sm font-mono">07</span> Intellectual Property</h2>
+            <p class="text-slate-400 text-sm leading-relaxed">The App, including its design, code, icons, and all associated content, is owned by Aaron Katz and is protected by copyright and other intellectual property laws. "SimpleFlights" and associated logos are trademarks of Aaron Katz. Nothing in these Terms transfers any ownership rights to you.</p>
+        </div>
 
-  <h2>10. Limitation of Liability</h2>
-  <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL AARON KATZ BE
-  LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING
-  BUT NOT LIMITED TO LOSS OF LIFE, BODILY INJURY, LOSS OF DATA, LOSS OF PROFITS, OR PROPERTY
-  DAMAGE, ARISING OUT OF OR RELATED TO YOUR USE OF OR INABILITY TO USE THE APP, EVEN IF
-  ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
-  <p>IN JURISDICTIONS THAT DO NOT ALLOW THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES, THE
-  DEVELOPER'S LIABILITY IS LIMITED TO THE GREATEST EXTENT PERMITTED BY LAW. IN NO EVENT SHALL
-  THE DEVELOPER'S TOTAL LIABILITY TO YOU EXCEED THE AMOUNT YOU PAID FOR THE APP.</p>
+        <div class="glass rounded-2xl p-8">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="text-blue-400 text-sm font-mono">08</span> Privacy</h2>
+            <p class="text-slate-400 text-sm leading-relaxed">Your use of the App is also governed by our <a href="./privacy-policy.html" class="text-blue-400 hover:text-blue-300 transition">Privacy Policy</a>, which is incorporated into these Terms by reference.</p>
+        </div>
 
-  <h2>11. Indemnification</h2>
-  <p>You agree to indemnify, defend, and hold harmless Aaron Katz from and against any claims,
-  damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees)
-  arising out of or related to: (a) your use of the App; (b) your violation of these Terms;
-  or (c) your violation of any applicable law or third-party rights.</p>
+        <div class="glass rounded-2xl p-8">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="text-blue-400 text-sm font-mono">09</span> Disclaimer of Warranties</h2>
+            <p class="text-slate-400 text-sm leading-relaxed mb-3 uppercase text-xs tracking-wide">The app is provided "as is" and "as available" without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, accuracy, or non-infringement. The developer does not warrant that the app will be uninterrupted, error-free, or free of viruses or other harmful components.</p>
+            <p class="text-slate-400 text-sm leading-relaxed">GPS accuracy, map data completeness, and airspace information accuracy are not guaranteed. Do not rely on this App for safety-of-life decisions.</p>
+        </div>
 
-  <h2>12. Updates &amp; Availability</h2>
-  <p>The Developer may update, modify, or discontinue the App at any time without notice.
-  Features described on the website or in app store listings may change between versions.
-  The Developer has no obligation to provide ongoing updates or to maintain backward
-  compatibility.</p>
+        <div class="glass rounded-2xl p-8">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="text-blue-400 text-sm font-mono">10</span> Limitation of Liability</h2>
+            <p class="text-slate-400 text-sm leading-relaxed mb-3 uppercase text-xs tracking-wide">To the maximum extent permitted by applicable law, in no event shall Aaron Katz be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of life, bodily injury, loss of data, loss of profits, or property damage, arising out of or related to your use of or inability to use the app, even if advised of the possibility of such damages.</p>
+            <p class="text-slate-400 text-sm leading-relaxed">In no event shall the Developer's total liability to you exceed the amount you paid for the App.</p>
+        </div>
 
-  <h2>13. Termination</h2>
-  <p>Your license to use the App terminates automatically if you violate any of these Terms.
-  Upon termination, you must cease all use of the App and delete all copies from your
-  devices. Sections 4, 7, 9, 10, 11, and 14 survive termination.</p>
+        <div class="glass rounded-2xl p-8">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="text-blue-400 text-sm font-mono">11</span> Indemnification</h2>
+            <p class="text-slate-400 text-sm leading-relaxed">You agree to indemnify, defend, and hold harmless Aaron Katz from and against any claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising out of or related to: (a) your use of the App; (b) your violation of these Terms; or (c) your violation of any applicable law or third-party rights.</p>
+        </div>
 
-  <h2>14. Governing Law &amp; Disputes</h2>
-  <p>These Terms are governed by the laws of the <strong>Province of Ontario</strong> and the
-  federal laws of Canada applicable therein, without regard to conflict of law principles.
-  Any dispute arising from these Terms or your use of the App shall be subject to the
-  exclusive jurisdiction of the courts of the Province of Ontario, and you consent to the
-  personal jurisdiction of those courts.</p>
-  <p>Nothing in these Terms limits any rights you may have under applicable consumer
-  protection legislation in your province or territory of residence that cannot be waived by
-  agreement.</p>
-  <p>If any provision of these Terms is held to be unenforceable, the remaining provisions
-  will continue in full force and effect.</p>
+        <div class="glass rounded-2xl p-8">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="text-blue-400 text-sm font-mono">12</span> Updates &amp; Availability</h2>
+            <p class="text-slate-400 text-sm leading-relaxed">The Developer may update, modify, or discontinue the App at any time without notice. Features described on the website or in app store listings may change between versions. The Developer has no obligation to provide ongoing updates or to maintain backward compatibility.</p>
+        </div>
 
-  <h2>15. Changes to These Terms</h2>
-  <p>The Developer may revise these Terms at any time by updating this page. The "Last
-  updated" date at the top will reflect the most recent revision. Your continued use of the
-  App after changes are posted constitutes your acceptance of the revised Terms.</p>
+        <div class="glass rounded-2xl p-8">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="text-blue-400 text-sm font-mono">13</span> Termination</h2>
+            <p class="text-slate-400 text-sm leading-relaxed">Your license to use the App terminates automatically if you violate any of these Terms. Upon termination, you must cease all use of the App and delete all copies from your devices. Sections 4, 7, 9, 10, 11, and 14 survive termination.</p>
+        </div>
 
-  <h2>16. Contact</h2>
-  <p>For questions about these Terms, please contact:<br />
-  Aaron Katz<br />
-  <a href="mailto:aaron@simpleflights.ca">aaron@simpleflights.ca</a></p>
+        <div class="glass rounded-2xl p-8">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="text-blue-400 text-sm font-mono">14</span> Governing Law &amp; Disputes</h2>
+            <p class="text-slate-400 text-sm leading-relaxed mb-3">These Terms are governed by the laws of the <span class="text-white font-semibold">Province of Ontario</span> and the federal laws of Canada applicable therein, without regard to conflict of law principles. Any dispute arising from these Terms or your use of the App shall be subject to the exclusive jurisdiction of the courts of the Province of Ontario, and you consent to the personal jurisdiction of those courts.</p>
+            <p class="text-slate-400 text-sm leading-relaxed mb-3">Nothing in these Terms limits any rights you may have under applicable consumer protection legislation in your province or territory of residence that cannot be waived by agreement.</p>
+            <p class="text-slate-400 text-sm leading-relaxed">If any provision of these Terms is held to be unenforceable, the remaining provisions will continue in full force and effect.</p>
+        </div>
 
-  <footer>
-    <p>&copy; 2025 Aaron Katz. All rights reserved. &nbsp;·&nbsp;
-    <a href="privacy-policy.html">Privacy Policy</a></p>
-  </footer>
+        <div class="glass rounded-2xl p-8">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="text-blue-400 text-sm font-mono">15</span> Changes to These Terms</h2>
+            <p class="text-slate-400 text-sm leading-relaxed">The Developer may revise these Terms at any time by updating this page. The "Last updated" date at the top will reflect the most recent revision. Your continued use of the App after changes are posted constitutes your acceptance of the revised Terms.</p>
+        </div>
 
-</div>
+        <div class="glass rounded-2xl p-8">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="text-blue-400 text-sm font-mono">16</span> Contact</h2>
+            <p class="text-slate-400 text-sm leading-relaxed">For questions about these Terms, please contact:<br>
+            Aaron Katz &nbsp;·&nbsp; <a href="mailto:aaron@simpleflights.ca" class="text-blue-400 hover:text-blue-300 transition font-semibold">aaron@simpleflights.ca</a></p>
+        </div>
+
+    </section>
+
+    <footer class="max-w-7xl mx-auto px-6 py-12 text-center text-slate-600 text-sm">
+        <p class="mb-4 font-bold text-slate-400">SimpleFlights</p>
+        <div class="flex justify-center gap-6 mb-8">
+            <a href="./contact.html" class="hover:text-white transition">Need Support? Have a Suggestion?</a>
+            <a href="./privacy-policy.html" class="hover:text-white transition">Privacy Policy</a>
+            <a href="./tos.html" class="hover:text-white transition">Terms of Service</a>
+        </div>
+        <p>&copy; 2025 Aaron Katz &nbsp;·&nbsp; Ontario, Canada</p>
+    </footer>
+
 </body>
 </html>
