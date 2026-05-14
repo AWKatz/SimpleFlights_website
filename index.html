@@ -36,20 +36,35 @@
                 <a href="./privacy-policy.html" class="hover:text-white transition">Privacy</a>
                 <a href="./tos.html" class="hover:text-white transition">TOS</a>
             </div>
-            <div class="flex gap-4">
+            <div class="flex items-center gap-4">
                 <a href="#download" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition">Download</a>
+                <button id="menuBtn" class="md:hidden text-slate-400 hover:text-white transition p-1" aria-label="Open menu">
+                    <i id="menuIcon" class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden md:hidden border-t border-slate-800/50">
+            <div class="flex flex-col px-6 py-2">
+                <a href="#features"             class="text-slate-400 hover:text-white transition py-3 border-b border-slate-800/30 text-sm font-medium">Features</a>
+                <a href="#showcase"             class="text-slate-400 hover:text-white transition py-3 border-b border-slate-800/30 text-sm font-medium">Gallery</a>
+                <a href="#pricing"              class="text-slate-400 hover:text-white transition py-3 border-b border-slate-800/30 text-sm font-medium">TL;DR</a>
+                <a href="./devlog.html"         class="text-slate-400 hover:text-white transition py-3 border-b border-slate-800/30 text-sm font-medium">DevLog</a>
+                <a href="./contact.html"        class="text-slate-400 hover:text-white transition py-3 border-b border-slate-800/30 text-sm font-medium">Contact Me</a>
+                <a href="./privacy-policy.html" class="text-slate-400 hover:text-white transition py-3 border-b border-slate-800/30 text-sm font-medium">Privacy</a>
+                <a href="./tos.html"            class="text-slate-400 hover:text-white transition py-3 text-sm font-medium">TOS</a>
             </div>
         </div>
     </nav>
 
     <!--HOOK AND LINKS-->
-    <section class="max-w-7xl mx-auto px-6 pt-20 pb-24 flex flex-col lg:flex-row items-center gap-12">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-16 pb-24 flex flex-col lg:flex-row items-center gap-12 overflow-x-hidden">
         <div class="lg:w-1/2 space-y-8 text-center lg:text-left">
             <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight">
                 Your logbook.<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Your flights.</span><br>Simplified.
             </h1>
             <p class="text-lg text-slate-400 max-w-lg mx-auto lg:mx-0">
-                SimpleFlights began initially as set of Apple Shortcut actions in a lengthy workflow that I created to help me fill out my logbook and to share my license training progress with friends and family, 
+                SimpleFlights began initially as set of Apple Shortcut actions in a lengthy workflow that I created to help me fill out my logbook and share my flight progress with friends and family, 
                 but has since evolved into a standalone Flutter app once I realized that I wanted to have more capabilities to help suppliment my PTR, share flight updates, and help my flight instructors get more insight into my flights as a student pilot.  
             </p>
             
@@ -70,11 +85,11 @@
         </div>
 
         <div class="lg:w-1/2 relative flex justify-center">
-            <div class="relative z-10 w-72 h-[580px] bg-slate-900 rounded-[3rem] border-[10px] border-slate-800 shadow-2xl overflow-hidden">
+            <div class="relative z-10 w-64 sm:w-72 h-[520px] sm:h-[580px] bg-slate-900 rounded-[3rem] border-[10px] border-slate-800 shadow-2xl overflow-hidden">
                 <img src="images/hero-phone-ui.mp4" alt="SimpleFlights Dashboard" class="w-full h-full object-cover">
             </div>
 
-            <div class="absolute -right-8 top-1/4 w-[600px] h-[400px] border-slate-800 shadow-2xl rounded-3xl xl:block -rotate-6 border-[10px] backdrop-blur-sm overflow-hidden">
+            <div class="hidden xl:block absolute -right-8 top-1/4 w-[600px] h-[400px] border-slate-800 shadow-2xl rounded-3xl -rotate-6 border-[10px] backdrop-blur-sm overflow-hidden">
                 <img src="images/hero-tablet-ui.png" alt="Tablet View" class="w-full h-full object-cover opacity-60">
             </div>
         </div>
@@ -294,6 +309,25 @@
 
 </body>
 <script>
+// Mobile nav toggle
+const menuBtn  = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const menuIcon = document.getElementById('menuIcon');
+if (menuBtn) {
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        menuIcon.className = mobileMenu.classList.contains('hidden')
+            ? 'fa-solid fa-bars text-xl'
+            : 'fa-solid fa-xmark text-xl';
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIcon.className = 'fa-solid fa-bars text-xl';
+        });
+    });
+}
+
 const slider = document.querySelector('.custom-scrollbar');
  let isDown = false;
  let startX;

@@ -29,8 +29,23 @@
                 <a href="./privacy-policy.html" class="text-white transition">Privacy</a>
                 <a href="./tos.html" class="hover:text-white transition">TOS</a>
             </div>
-            <div class="flex gap-4">
+            <div class="flex items-center gap-4">
                 <a href="./index.html#download" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition">Download</a>
+                <button id="menuBtn" class="md:hidden text-slate-400 hover:text-white transition p-1" aria-label="Open menu">
+                    <i id="menuIcon" class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden md:hidden border-t border-slate-800/50">
+            <div class="flex flex-col px-6 py-2">
+                <a href="./index.html#features"   class="text-slate-400 hover:text-white transition py-3 border-b border-slate-800/30 text-sm font-medium">Features</a>
+                <a href="./index.html#showcase"   class="text-slate-400 hover:text-white transition py-3 border-b border-slate-800/30 text-sm font-medium">Gallery</a>
+                <a href="./index.html#pricing"    class="text-slate-400 hover:text-white transition py-3 border-b border-slate-800/30 text-sm font-medium">TL;DR</a>
+                <a href="./devlog.html"           class="text-slate-400 hover:text-white transition py-3 border-b border-slate-800/30 text-sm font-medium">DevLog</a>
+                <a href="./contact.html"          class="text-slate-400 hover:text-white transition py-3 border-b border-slate-800/30 text-sm font-medium">Contact Me</a>
+                <a href="./privacy-policy.html"   class="text-white py-3 border-b border-slate-800/30 text-sm font-medium">Privacy</a>
+                <a href="./tos.html"              class="text-slate-400 hover:text-white transition py-3 text-sm font-medium">TOS</a>
             </div>
         </div>
     </nav>
@@ -182,4 +197,23 @@
     </footer>
 
 </body>
+<script>
+const menuBtn    = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const menuIcon   = document.getElementById('menuIcon');
+if (menuBtn) {
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        menuIcon.className = mobileMenu.classList.contains('hidden')
+            ? 'fa-solid fa-bars text-xl'
+            : 'fa-solid fa-xmark text-xl';
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIcon.className = 'fa-solid fa-bars text-xl';
+        });
+    });
+}
+</script>
 </html>
