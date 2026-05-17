@@ -65,8 +65,15 @@
                 Your logbook.<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Your flights.</span><br>Simplified.
             </h1>
             <p class="text-lg text-slate-400 max-w-lg mx-auto lg:mx-0">
-                SimpleFlights began initially as set of Apple Shortcut actions in a lengthy workflow that I created to help me fill out my logbook and share my flight progress with friends and family, 
-                but has since evolved into a standalone Flutter app once I realized that I wanted to have more capabilities to help suppliment my PTR, share flight updates, and help my flight instructors get more insight into my flights as a student pilot.  
+                SimpleFlights began initially as a complex Apple Shortcut group of 
+                actions that I created to help me early on in my flight training. 
+                Not only did it help me fill out my logbook and PTR, but it also 
+                gave me a way to share my flight progress with friends and family. 
+                As I got further along in my training, I started to need more and more
+                functionality but knew I needed to start from the ground up with a standalone
+                app to be able to accomplish what I was envisioning. SimpleFlights is the 
+                result of that vision, and I can't wait to see how it can get further enhanced
+                and shaped by making it availabe to everyone!
             </p>
             
             <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -148,7 +155,7 @@
             </div>
         </div>
         <br>
-        <h2 class="text-2xl font-bold text-center pt-10">With plenty of features already coming soon to make your flights simple!</h2>
+        <h2 class="text-2xl font-bold text-center pt-10">With plenty of additional features already on the roadmap and coming soon!</h2>
     </section>
 
     <!--SCREENSHOTS AND GIFS-->
@@ -156,15 +163,15 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-12">
                 <h2 class="text-3xl font-bold">Gallery</h2>
-                <p class="text-slate-400">Taken from current v0.81 build of the iOS and Android apps</p>
+                <p class="text-slate-400">Android</p>
             </div>
 
             <div class="flex overflow-x-auto gap-8 custom-scrollbar pb-10">
 
             <div class="min-w-[320px] group">
-                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/hero-phone-ui.mp4', 'Airport Lookup Demo')">
+                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Aircraft_List.png', 'Aircraft List')">
                     <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                    <img src="images/hero-phone-ui.mp4" alt="Airport Lookup Demo" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                    <img src="images/Aircraft_List.png" alt="Aircraft List" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
                     </div>
                     <h3 class="font-bold text-center">Manage Your Fleet</h3>
                     <p class="text-slate-400"></p>
@@ -172,62 +179,61 @@
             </div>
                 
             <div class="min-w-[320px] group">
-                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/screenshot-live-tracker.png', 'Shared flight tracking')">
+                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Flight_logs.png', 'Flight Logs')">
                     <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                        <img src="images/screenshot-live-tracker.png" alt="Live Tracker" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                        <img src="images/Flight_logs.png" alt="Flight Logs" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
                     </div>
                     <h3 class="font-bold text-center">Keep Log of Your Flights</h3>
-                    <p class="text-slate-400"></p>
+                    <p class="text-slate-400">Suppliment your PTR and logbook with automatic log entries and at a glance pilot stats.</p>
                 </div> 
             </div>
 
             <div class="min-w-[320px] group">
-                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/share-sheet.png', 'Easy post-flight sharing')">
+                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Share_Sheet.png', 'Share Sheet')">
                     <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                        <img src="images/share-sheet.png" alt="Share Sheet" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                        <img src="images/Share_Sheet.png" alt="Share Sheet" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
                     </div>
                     <h3 class="font-bold text-center">After Flight Sharing</h3>
-                    <p class="text-slate-400"></p>
+                    <p class="text-slate-400">Share the details of your flight complete with flight path using your devices share sheet.</p>
                 </div>
             </div>
                 
             <div class="min-w-[320px] group">
-                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/flight-playback.mp4', 'Playback your flight')">
+                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Flight_Playback.png', 'Flight History Playback')">
                     <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                        <img src="images/flight-playback.MP4" alt="Animated Map Playback" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                        <img src="images/Flight_Playback.png" alt="Flight History Playback" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
                     </div>
                     <h3 class="font-bold text-center">Flight History Playback</h3>
-                    <p class="text-slate-400"></p>
+                    <p class="text-slate-400">Review your past flights with detailed analytics and performance metrics.</p>
                 </div>
             </div>
 
             <div class="min-w-[320px] group">
-                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/flight-playback.mp4', 'Playback your flight')">
+                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Flight_Planning.png', 'Flight Planning')">
                     <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                        <img src="images/flight-playback.MP4" alt="Animated Map Playback" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                        <img src="images/Flight_Planning.png" alt="Flight Planning" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
                     </div>
                     <h3 class="font-bold text-center">Flight Planning</h3>
-                    <p class="text-slate-400"></p>
+                    <p class="text-slate-400">Create and save flight plans, complete with fuel and time enroute estimates.</p>
                 </div>
             </div>
 
             <div class="min-w-[320px] group">
-                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/flight-playback.mp4', 'Playback your flight')">
+                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Android_Widgets.png', 'Android Widgets')">
                     <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                        <img src="images/flight-playback.MP4" alt="Animated Map Playback" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <h3 class="font-bold text-center">Flight History Playback</h3>
-                    <p class="text-slate-400"></p>
+                        <img src="images/Android_Widgets.png" alt="Android Widgets" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                    <h3 class="font-bold text-center">Homescreen Widgets</h3>
+                    <p class="text-slate-400">Get at a glance log book info or live flight stats.</p>
                 </div>
             </div>
 
             <div class="min-w-[320px] group">
-                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/fleet-management.png', 'View and edit your aircraft info')">
+                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/MQTT.png', 'Live Tracking')">
                     <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                        <img src="images/fleet-management.png" alt="Fleet Management" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                        <img src="images/MQTT.png" alt="Live Tracking" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
                     </div>
-                    <h3 class="font-bold text-center">Manage The Aircraft You Fly</h3>
-                    <p class="text-slate-400">Quickly access and manage details about the planes you fly, and keep track key info like HOBBs times and maintenance notes.</p>
+                    <h3 class="font-bold text-center">Live Flight Tracking</h3>
+                    <p class="text-slate-400">Share real-time flight information with others in the aircraft, or at the FBO.</p>
                 </div>
         </div>   
         </div> 
@@ -245,7 +251,7 @@
             <div class="h-12 w-[1px] bg-slate-800"></div>
             <div class="text-left opacity-40">
                 <p class="text-xs uppercase text-slate-500 font-bold mb-1">The BIG Apps</p>
-                <p class="text-2xl font-light">Start at $180CAD/year</p>
+                <p class="text-2xl font-light">>$180CAD/year</p>
             </div>
         </div>
     </section>
@@ -255,7 +261,7 @@
         <div class="flex flex-col items-center gap-12">
             <div class="text-center w-full">
                 <h2 class="text-3xl font-bold mb-2">Log your flights.</h2>
-                <p class="text-slate-400">Logging mode available for Android and iOS devices.</p>
+                <p class="text-slate-400">Flight Logging available for Android and iOS devices.</p>
                 <br>
                 <div class="flex flex-wrap gap-4 justify-center">
                 <button class="bg-slate-800 hover:bg-slate-700 px-6 py-2 rounded-xl flex items-center gap-3 font-bold transition">
