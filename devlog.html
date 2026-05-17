@@ -60,7 +60,7 @@
         document.addEventListener('DOMContentLoaded', async () => {
             const target = document.getElementById('log-target');
             try {
-                const res = await fetch('/buildhistory.md');
+                const res = await fetch('./buildhistory.md');
                 if (!res.ok) throw new Error();
 
                 const md = await res.text();
