@@ -163,102 +163,167 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-12">
                 <h2 class="text-3xl font-bold">Gallery</h2>
-                <p class="text-slate-400">Android</p>
+                <p class="text-slate-400">Screenshots and recordings from across all platforms.</p>
             </div>
 
-            <div class="flex overflow-x-auto gap-8 custom-scrollbar pb-10">
+            <div class="space-y-4">
 
-            <div class="min-w-[320px] group">
-                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Aircraft_List.png', 'Aircraft List')">
-                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                    <img src="images/Aircraft_List.png" alt="Aircraft List" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                <!-- Android -->
+                <div class="border border-slate-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleGallery('android')" class="w-full flex justify-between items-center px-6 py-4 bg-slate-900/50 hover:bg-slate-800/50 transition text-left">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-brands fa-android text-emerald-400 text-xl"></i>
+                            <span class="font-bold text-lg">Android</span>
+                        </div>
+                        <i id="android-chevron" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="android-gallery" class="overflow-hidden" style="max-height: 2000px; transition: max-height 0.4s ease;">
+                        <div class="flex overflow-x-auto gap-8 custom-scrollbar pb-10 px-6 pt-4">
+
+                            <div class="min-w-[320px] group">
+                                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Aircraft_List.png', 'Aircraft List')">
+                                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                        <img src="images/Aircraft_List.png" alt="Aircraft List" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                                    </div>
+                                    <h3 class="font-bold text-center">Manage Your Fleet</h3>
+                                    <p class="text-slate-400">Add and manage info about the aircraft you frequently fly. Calculate Weight and Balance, fuel burn and other key details to help make your flight planning easy.</p>
+                                </div>
+                            </div>
+
+                            <div class="min-w-[320px] group">
+                                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Flight_logs.png', 'Flight Logs')">
+                                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                        <img src="images/Flight_logs.png" alt="Flight Logs" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                                    </div>
+                                    <h3 class="font-bold text-center">Keep Log of Your Flights</h3>
+                                    <p class="text-slate-400">Supplement your PTR and logbook with automatic log entries and at a glance pilot stats.</p>
+                                </div>
+                            </div>
+
+                            <div class="min-w-[320px] group">
+                                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Share_Sheet.png', 'Share Sheet')">
+                                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                        <img src="images/Share_Sheet.png" alt="Share Sheet" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                                    </div>
+                                    <h3 class="font-bold text-center">After Flight Sharing</h3>
+                                    <p class="text-slate-400">Share the details of your flight complete with flight path using your device's share sheet.</p>
+                                </div>
+                            </div>
+
+                            <div class="min-w-[320px] group">
+                                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Flight_Playback.png', 'Flight History Playback')">
+                                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                        <img src="images/Flight_Playback.png" alt="Flight History Playback" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                                    </div>
+                                    <h3 class="font-bold text-center">Flight History Playback</h3>
+                                    <p class="text-slate-400">Review your past flights with detailed analytics and performance metrics.</p>
+                                </div>
+                            </div>
+
+                            <div class="min-w-[320px] group">
+                                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Flight_Planning.png', 'Flight Planning')">
+                                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                        <img src="images/Flight_Planning.png" alt="Flight Planning" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                                    </div>
+                                    <h3 class="font-bold text-center">Flight Planning</h3>
+                                    <p class="text-slate-400">Create and save flight plans, complete with fuel and time enroute estimates.</p>
+                                </div>
+                            </div>
+
+                            <div class="min-w-[320px] group">
+                                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Android_Widgets.png', 'Android Widgets')">
+                                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                        <img src="images/Android_Widgets.png" alt="Android Widgets" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                                    </div>
+                                    <h3 class="font-bold text-center">Homescreen Widgets</h3>
+                                    <p class="text-slate-400">Get at a glance logbook info or live flight stats.</p>
+                                </div>
+                            </div>
+
+                            <div class="min-w-[320px] group">
+                                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/MQTT.png', 'Live Tracking')">
+                                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                        <img src="images/MQTT.png" alt="Live Tracking" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                                    </div>
+                                    <h3 class="font-bold text-center">Live Flight Tracking</h3>
+                                    <p class="text-slate-400">Share real-time flight information with others in the aircraft, or at the FBO.</p>
+                                </div>
+                            </div>
+
+                            <div class="min-w-[320px] group">
+                                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Airport_Info.png', 'Airport Information')">
+                                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                        <img src="images/Airport_Info.png" alt="Airport Information" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                                    </div>
+                                    <h3 class="font-bold text-center">Airport Information</h3>
+                                    <p class="text-slate-400">Access real-time airport information, weather conditions, and more whether you're on the ground or in the air.</p>
+                                </div>
+                            </div>
+
+                            <div class="min-w-[320px] group">
+                                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Flight_Viewer.png', 'Flight Viewer')">
+                                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                        <img src="images/Flight_Viewer.png" alt="Flight Viewer" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                                    </div>
+                                    <h3 class="font-bold text-center">Flight Viewer</h3>
+                                    <p class="text-slate-400">Join live flight sessions and view real-time telemetry using our simple peer to peer network.</p>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-                    <h3 class="font-bold text-center">Manage Your Fleet</h3>
-                    <p class="text-slate-400">Add and manage info about the aircraft you frequently fly. Calculate Weight and Balance, fuel burn and other key details to help make your flight planning easy.</p>
                 </div>
-            </div>
-                
-            <div class="min-w-[320px] group">
-                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Flight_logs.png', 'Flight Logs')">
-                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                        <img src="images/Flight_logs.png" alt="Flight Logs" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <h3 class="font-bold text-center">Keep Log of Your Flights</h3>
-                    <p class="text-slate-400">Suppliment your PTR and logbook with automatic log entries and at a glance pilot stats.</p>
-                </div> 
-            </div>
 
-            <div class="min-w-[320px] group">
-                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Share_Sheet.png', 'Share Sheet')">
-                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                        <img src="images/Share_Sheet.png" alt="Share Sheet" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                <!-- iOS -->
+                <div class="border border-slate-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleGallery('ios')" class="w-full flex justify-between items-center px-6 py-4 bg-slate-900/50 hover:bg-slate-800/50 transition text-left">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-brands fa-apple text-slate-300 text-xl"></i>
+                            <span class="font-bold text-lg">iOS</span>
+                        </div>
+                        <i id="ios-chevron" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300" style="transform: rotate(-90deg);"></i>
+                    </button>
+                    <div id="ios-gallery" class="overflow-hidden" style="max-height: 0; transition: max-height 0.4s ease;">
+                        <div class="flex overflow-x-auto gap-8 custom-scrollbar pb-10 px-6 pt-4">
+                            <!-- iOS screenshots go here -->
+                        </div>
                     </div>
-                    <h3 class="font-bold text-center">After Flight Sharing</h3>
-                    <p class="text-slate-400">Share the details of your flight complete with flight path using your devices share sheet.</p>
                 </div>
-            </div>
-                
-            <div class="min-w-[320px] group">
-                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Flight_Playback.png', 'Flight History Playback')">
-                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                        <img src="images/Flight_Playback.png" alt="Flight History Playback" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+
+                <!-- Apple Watch -->
+                <div class="border border-slate-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleGallery('watch')" class="w-full flex justify-between items-center px-6 py-4 bg-slate-900/50 hover:bg-slate-800/50 transition text-left">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-stopwatch text-blue-400 text-xl"></i>
+                            <span class="font-bold text-lg">Apple Watch</span>
+                        </div>
+                        <i id="watch-chevron" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300" style="transform: rotate(-90deg);"></i>
+                    </button>
+                    <div id="watch-gallery" class="overflow-hidden" style="max-height: 0; transition: max-height 0.4s ease;">
+                        <div class="flex overflow-x-auto gap-8 custom-scrollbar pb-10 px-6 pt-4">
+                            <!-- Apple Watch screenshots go here -->
+                        </div>
                     </div>
-                    <h3 class="font-bold text-center">Flight History Playback</h3>
-                    <p class="text-slate-400">Review your past flights with detailed analytics and performance metrics.</p>
                 </div>
-            </div>
 
-            <div class="min-w-[320px] group">
-                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Flight_Planning.png', 'Flight Planning')">
-                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                        <img src="images/Flight_Planning.png" alt="Flight Planning" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                <!-- Wear OS -->
+                <div class="border border-slate-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleGallery('wearos')" class="w-full flex justify-between items-center px-6 py-4 bg-slate-900/50 hover:bg-slate-800/50 transition text-left">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-brands fa-android text-blue-400 text-xl"></i>
+                            <span class="font-bold text-lg">Wear OS</span>
+                        </div>
+                        <i id="wearos-chevron" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300" style="transform: rotate(-90deg);"></i>
+                    </button>
+                    <div id="wearos-gallery" class="overflow-hidden" style="max-height: 0; transition: max-height 0.4s ease;">
+                        <div class="flex overflow-x-auto gap-8 custom-scrollbar pb-10 px-6 pt-4">
+                            <!-- Wear OS screenshots go here -->
+                        </div>
                     </div>
-                    <h3 class="font-bold text-center">Flight Planning</h3>
-                    <p class="text-slate-400">Create and save flight plans, complete with fuel and time enroute estimates.</p>
                 </div>
+
             </div>
-
-            <div class="min-w-[320px] group">
-                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Android_Widgets.png', 'Android Widgets')">
-                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                        <img src="images/Android_Widgets.png" alt="Android Widgets" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <h3 class="font-bold text-center">Homescreen Widgets</h3>
-                    <p class="text-slate-400">Get at a glance log book info or live flight stats.</p>
-                </div>
-            </div>
-
-            <div class="min-w-[320px] group">
-                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/MQTT.png', 'Live Tracking')">
-                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                        <img src="images/MQTT.png" alt="Live Tracking" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <h3 class="font-bold text-center">Live Flight Tracking</h3>
-                    <p class="text-slate-400">Share real-time flight information with others in the aircraft, or at the FBO.</p>
-                </div>  
-            </div> 
-        
-            <div class="min-w-[320px] group">
-                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Airport_Info.png', 'Airport Information')">
-                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                        <img src="images/Airport_Info.png" alt="Airport Information" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <h3 class="font-bold text-center">Airport Information</h3>
-                    <p class="text-slate-400">Access real-time airport information, weather conditions, and more whether you're on the ground or in the air.</p>
-                </div>  
-            </div> 
-
-            <div class="min-w-[320px] group">
-                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Flight_Viewer.png', 'Flight Viewer')">
-                    <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                        <img src="images/Flight_Viewer.png" alt="Flight Viewer" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <h3 class="font-bold text-center">Flight Viewer</h3>
-                    <p class="text-slate-400">Join live flight sessions and view real-time telemetry using our simple peer to peer network.</p>
-                </div>  
-            </div> 
-
-        </div> 
+        </div>
     </section>
 
     <section id="pricing" class="max-w-4xl mx-auto px-6 py-24 text-center">
@@ -357,30 +422,35 @@ if (menuBtn) {
     });
 }
 
-const slider = document.querySelector('.custom-scrollbar');
- let isDown = false;
- let startX;
- let scrollLeft;
+document.querySelectorAll('.custom-scrollbar').forEach(slider => {
+    let isDown = false, startX, scrollLeft;
+    slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener('mouseleave', () => { isDown = false; });
+    slider.addEventListener('mouseup',    () => { isDown = false; });
+    slider.addEventListener('mousemove',  (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        slider.scrollLeft = scrollLeft - (e.pageX - slider.offsetLeft - startX) * 2;
+    });
+});
 
-slider.addEventListener('mousedown', (e) => {
-isDown = true;
-    slider.classList.add('active');
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-});
-slider.addEventListener('mouseleave', () => {
-    isDown = false;
-});
-slider.addEventListener('mouseup', () => {
-    isDown = false;
-});
-slider.addEventListener('mousemove', (e) => {
-    if(!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 2; //scroll-fast
-    slider.scrollLeft = scrollLeft - walk;
-});
+const galleryOpen = { android: true, ios: false, watch: false, wearos: false };
+function toggleGallery(id) {
+    const gallery  = document.getElementById(id + '-gallery');
+    const chevron  = document.getElementById(id + '-chevron');
+    galleryOpen[id] = !galleryOpen[id];
+    if (galleryOpen[id]) {
+        gallery.style.maxHeight = gallery.scrollHeight + 'px';
+        chevron.style.transform = 'rotate(0deg)';
+    } else {
+        gallery.style.maxHeight = '0px';
+        chevron.style.transform = 'rotate(-90deg)';
+    }
+}
 const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImage');
     const modalCaption = document.getElementById('modalCaption');
