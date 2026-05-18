@@ -19,6 +19,7 @@
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #3b82f6; /* Blue-400 to match your theme */ border-radius: 10px; }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #60a5fa; /* Lighter blue on hover */ }
         .bg-clip-text { -webkit-text-fill-color: transparent; }
+        .watch-img { aspect-ratio: 9/11; object-fit: contain; background: #000; }
     </style>
 </head>
 <body class="antialiased">
@@ -65,15 +66,15 @@
                 Your logbook.<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Your flights.</span><br>Simplified.
             </h1>
             <p class="text-lg text-slate-400 max-w-lg mx-auto lg:mx-0">
-                SimpleFlights began initially as a complex Apple Shortcut group of 
+                SimpleFlights originally began as a complex Apple Shortcut group of 
                 actions that I created to help me early on in my flight training. 
                 Not only did it help me fill out my logbook and PTR, but it also 
                 gave me a way to share my flight progress with friends and family. 
-                As I got further along in my training, I started to need more and more
-                functionality but knew I needed to start from the ground up with a standalone
-                app to be able to accomplish what I was envisioning. SimpleFlights is the 
-                result of that vision, and I can't wait to see how it can get further enhanced
-                and shaped by making it availabe to everyone!
+                As my hours started to grow, so did my need to have more functionality,
+                but hitting the limits of what the Shortcut could do, I decided leverage my 
+                development background to start from the ground up with a dedicated app 
+                to accomplish what I was envisioning. SimpleFlights is the result of that 
+                vision, and the countless evenings and weekends that I spent developing it.
             </p>
             
             <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -183,7 +184,7 @@
                             <div class="min-w-[320px] group">
                                 <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Aircraft_List.png', 'Aircraft List')">
                                     <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                        <img src="images/Aircraft_List.png" alt="Aircraft List" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                                        <img src="images/android/Aircraft_List.png" alt="Aircraft List" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
                                     </div>
                                     <h3 class="font-bold text-center">Manage Your Fleet</h3>
                                     <p class="text-slate-400">Add and manage info about the aircraft you frequently fly. Calculate Weight and Balance, fuel burn and other key details to help make your flight planning easy.</p>
@@ -191,9 +192,9 @@
                             </div>
 
                             <div class="min-w-[320px] group">
-                                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Flight_logs.png', 'Flight Logs')">
+                                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/android/Flight_logs.png', 'Flight Logs')">
                                     <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                        <img src="images/Flight_logs.png" alt="Flight Logs" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                                        <img src="images/android/Flight_logs.png" alt="Flight Logs" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
                                     </div>
                                     <h3 class="font-bold text-center">Keep Log of Your Flights</h3>
                                     <p class="text-slate-400">Supplement your PTR and logbook with automatic log entries and at a glance pilot stats.</p>
@@ -201,9 +202,9 @@
                             </div>
 
                             <div class="min-w-[320px] group">
-                                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Share_Sheet.png', 'Share Sheet')">
+                                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/android/Share_Sheet.png', 'Share Sheet')">
                                     <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                        <img src="images/Share_Sheet.png" alt="Share Sheet" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                                        <img src="images/android/Share_Sheet.png" alt="Share Sheet" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
                                     </div>
                                     <h3 class="font-bold text-center">After Flight Sharing</h3>
                                     <p class="text-slate-400">Share the details of your flight complete with flight path using your device's share sheet.</p>
@@ -211,9 +212,9 @@
                             </div>
 
                             <div class="min-w-[320px] group">
-                                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Flight_Playback.png', 'Flight History Playback')">
+                                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/android/Flight_Playback.png', 'Flight History Playback')">
                                     <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                        <img src="images/Flight_Playback.png" alt="Flight History Playback" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                                        <img src="images/android/Flight_Playback.png" alt="Flight History Playback" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
                                     </div>
                                     <h3 class="font-bold text-center">Flight History Playback</h3>
                                     <p class="text-slate-400">Review your past flights with detailed analytics and performance metrics.</p>
@@ -221,9 +222,9 @@
                             </div>
 
                             <div class="min-w-[320px] group">
-                                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Flight_Planning.png', 'Flight Planning')">
+                                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/android/Flight_Planning.png', 'Flight Planning')">
                                     <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                        <img src="images/Flight_Planning.png" alt="Flight Planning" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                                        <img src="images/android/Flight_Planning.png" alt="Flight Planning" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
                                     </div>
                                     <h3 class="font-bold text-center">Flight Planning</h3>
                                     <p class="text-slate-400">Create and save flight plans, complete with fuel and time enroute estimates.</p>
@@ -233,7 +234,7 @@
                             <div class="min-w-[320px] group">
                                 <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Android_Widgets.png', 'Android Widgets')">
                                     <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                        <img src="images/Android_Widgets.png" alt="Android Widgets" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                                        <img src="images/android/Android_Widgets.png" alt="Android Widgets" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
                                     </div>
                                     <h3 class="font-bold text-center">Homescreen Widgets</h3>
                                     <p class="text-slate-400">Get at a glance logbook info or live flight stats.</p>
@@ -241,9 +242,9 @@
                             </div>
 
                             <div class="min-w-[320px] group">
-                                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/MQTT.png', 'Live Tracking')">
+                                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/android/MQTT.png', 'Live Tracking')">
                                     <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                        <img src="images/MQTT.png" alt="Live Tracking" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                                        <img src="images/android/MQTT.png" alt="Live Tracking" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
                                     </div>
                                     <h3 class="font-bold text-center">Live Flight Tracking</h3>
                                     <p class="text-slate-400">Share real-time flight information with others in the aircraft, or at the FBO.</p>
@@ -251,9 +252,9 @@
                             </div>
 
                             <div class="min-w-[320px] group">
-                                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Airport_Info.png', 'Airport Information')">
+                                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/android/Airport_Info.png', 'Airport Information')">
                                     <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                        <img src="images/Airport_Info.png" alt="Airport Information" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                                        <img src="images/android/Airport_Info.png" alt="Airport Information" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
                                     </div>
                                     <h3 class="font-bold text-center">Airport Information</h3>
                                     <p class="text-slate-400">Access real-time airport information, weather conditions, and more whether you're on the ground or in the air.</p>
@@ -261,9 +262,9 @@
                             </div>
 
                             <div class="min-w-[320px] group">
-                                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/Flight_Viewer.png', 'Flight Viewer')">
+                                <div class="min-w-[320px] group cursor-zoom-in" onclick="openModal('images/android/Flight_Viewer.png', 'Flight Viewer')">
                                     <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                        <img src="images/Flight_Viewer.png" alt="Flight Viewer" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
+                                        <img src="images/android/Flight_Viewer.png" alt="Flight Viewer" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
                                     </div>
                                     <h3 class="font-bold text-center">Flight Viewer</h3>
                                     <p class="text-slate-400">Join live flight sessions and view real-time telemetry using our simple peer to peer network.</p>
@@ -294,15 +295,24 @@
                 <div class="border border-slate-800 rounded-2xl overflow-hidden">
                     <button onclick="toggleGallery('watch')" class="w-full flex justify-between items-center px-6 py-4 bg-slate-900/50 hover:bg-slate-800/50 transition text-left">
                         <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-stopwatch text-blue-400 text-xl"></i>
+                            <i class="fa-brands fa-apple text-blue-400 text-xl"></i>
                             <span class="font-bold text-lg">Apple Watch</span>
                         </div>
                         <i id="watch-chevron" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300" style="transform: rotate(-90deg);"></i>
                     </button>
                     <div id="watch-gallery" class="overflow-hidden" style="max-height: 0; transition: max-height 0.4s ease;">
                         <div class="flex overflow-x-auto gap-8 custom-scrollbar pb-10 px-6 pt-4">
-                            <!-- Apple Watch screenshots go here -->
+
+                            <div class="w-[220px] flex-shrink-0 group cursor-zoom-in" onclick="openModal('images/applewatch/Main_Ultra2.png', 'Apple Watch App')">
+                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                    <img src="images/applewatch/Main_Ultra2.png" alt="Apple Watch App" class="w-full watch-img group-hover:scale-105 transition duration-500">
+                                </div>
+                                <h3 class="font-bold text-center">Stats At a Glance</h3>
+                                <p class="text-slate-400">SimpleFlights ships with a companion app for your Apple Watch so you can have quick access to your flight information.</p>
+                            </div>
+
                         </div>
+
                     </div>
                 </div>
 
@@ -311,13 +321,21 @@
                     <button onclick="toggleGallery('wearos')" class="w-full flex justify-between items-center px-6 py-4 bg-slate-900/50 hover:bg-slate-800/50 transition text-left">
                         <div class="flex items-center gap-3">
                             <i class="fa-brands fa-android text-blue-400 text-xl"></i>
-                            <span class="font-bold text-lg">Wear OS</span>
+                            <span class="font-bold text-lg">Android Wear</span>
                         </div>
                         <i id="wearos-chevron" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300" style="transform: rotate(-90deg);"></i>
                     </button>
                     <div id="wearos-gallery" class="overflow-hidden" style="max-height: 0; transition: max-height 0.4s ease;">
                         <div class="flex overflow-x-auto gap-8 custom-scrollbar pb-10 px-6 pt-4">
                             <!-- Wear OS screenshots go here -->
+                                <div class="w-[220px] flex-shrink-0 group cursor-zoom-in" onclick="openModal('images/androidwear/#.png', 'Android Wear App')">
+                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                    <img src="images/androidwear/#.png" alt="Android Wear App" class="w-full watch-img group-hover:scale-105 transition duration-500">
+                                </div>
+                                <h3 class="font-bold text-center">Stats At a Glance</h3>
+                                <p class="text-slate-400">SimpleFlights ships with a companion app for your Android Wear device so you can have quick access to your flight information.</p>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -328,7 +346,7 @@
 
     <section id="pricing" class="max-w-4xl mx-auto px-6 py-24 text-center">
         <h2 class="text-4xl font-extrabold mb-6">No Subscriptions or Ads. Ever.</h2>
-        <p class="text-slate-400 mb-12">A one-time purchase gives you lifetime access on all your devices. Your data isn't collected and is stored locally on YOUR device.</p>
+        <p class="text-slate-400 mb-12 font-extrabold">A one-time purchase gives you lifetime access on all your devices. Your data isn't collected and is stored locally on YOUR device.</p>
         
         <div class="inline-flex gap-8 items-center bg-slate-900 border border-slate-800 rounded-3xl p-8">
             <div class="text-left">
@@ -444,7 +462,7 @@ function toggleGallery(id) {
     const chevron  = document.getElementById(id + '-chevron');
     galleryOpen[id] = !galleryOpen[id];
     if (galleryOpen[id]) {
-        gallery.style.maxHeight = gallery.scrollHeight + 'px';
+        gallery.style.maxHeight = '2000px';
         chevron.style.transform = 'rotate(0deg)';
     } else {
         gallery.style.maxHeight = '0px';
