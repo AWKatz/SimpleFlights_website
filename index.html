@@ -286,7 +286,151 @@
                     </button>
                     <div id="ios-gallery" class="overflow-hidden" style="max-height: 0; transition: max-height 0.4s ease;">
                         <div class="flex overflow-x-auto gap-8 custom-scrollbar pb-10 px-6 pt-4">
-                            <!-- iOS screenshots go here -->
+
+                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/flight_log.jpeg', 'Flight Log')">
+                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                    <img src="images/ios/flight_log.jpeg" alt="Flight Log" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
+                                </div>
+                                <h3 class="font-bold text-center">Flight Log</h3>
+                                <p class="text-slate-400 text-sm">Keep a detailed log of every flight with times, routes, and notes.</p>
+                            </div>
+
+                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/pre_flight.jpeg', 'Pre-Flight')">
+                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                    <img src="images/ios/pre_flight.jpeg" alt="Pre-Flight" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
+                                </div>
+                                <h3 class="font-bold text-center">Pre-Flight</h3>
+                                <p class="text-slate-400 text-sm">Run through pre-flight checks and review aircraft details before departure.</p>
+                            </div>
+
+                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/saved_aircraft.jpeg', 'Saved Aircraft')">
+                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                    <img src="images/ios/saved_aircraft.jpeg" alt="Saved Aircraft" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
+                                </div>
+                                <h3 class="font-bold text-center">Saved Aircraft</h3>
+                                <p class="text-slate-400 text-sm">Browse and manage your fleet of saved aircraft profiles.</p>
+                            </div>
+
+                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/edit_aircraft.jpeg', 'Edit Aircraft')">
+                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                    <img src="images/ios/edit_aircraft.jpeg" alt="Edit Aircraft" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
+                                </div>
+                                <h3 class="font-bold text-center">Edit Aircraft</h3>
+                                <p class="text-slate-400 text-sm">Update aircraft profiles including W&amp;B and performance data.</p>
+                            </div>
+
+                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/range_estimates.jpeg', 'Range Estimates')">
+                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                    <img src="images/ios/range_estimates.jpeg" alt="Range Estimates" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
+                                </div>
+                                <h3 class="font-bold text-center">Range Estimates</h3>
+                                <p class="text-slate-400 text-sm">Calculate your aircraft's range and fuel requirements for the planned route.</p>
+                            </div>
+
+                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/flight_planning.jpeg', 'Flight Planning')">
+                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                    <img src="images/ios/flight_planning.jpeg" alt="Flight Planning" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
+                                </div>
+                                <h3 class="font-bold text-center">Flight Planning</h3>
+                                <p class="text-slate-400 text-sm">Plan your cross-country routes with METAR, TAF, and enroute estimates.</p>
+                            </div>
+
+                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/airport_info.jpeg', 'Airport Information')">
+                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                    <img src="images/ios/airport_info.jpeg" alt="Airport Information" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
+                                </div>
+                                <h3 class="font-bold text-center">Airport Information</h3>
+                                <p class="text-slate-400 text-sm">Access real-time weather, frequencies, and runway data for any airport.</p>
+                            </div>
+
+                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/airport_map.jpeg', 'Airport Map')">
+                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                    <img src="images/ios/airport_map.jpeg" alt="Airport Map" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
+                                </div>
+                                <h3 class="font-bold text-center">Airport Map</h3>
+                                <p class="text-slate-400 text-sm">View detailed airport maps with runway overlays and navigation aids.</p>
+                            </div>
+
+                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/live_tracking.jpeg', 'Live Tracking')">
+                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                    <img src="images/ios/live_tracking.jpeg" alt="Live Tracking" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
+                                </div>
+                                <h3 class="font-bold text-center">Live Tracking</h3>
+                                <p class="text-slate-400 text-sm">Broadcast your position in real-time to passengers or people following from home.</p>
+                            </div>
+
+                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/live_viewer.jpeg', 'Live Viewer')">
+                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                    <img src="images/ios/live_viewer.jpeg" alt="Live Viewer" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
+                                </div>
+                                <h3 class="font-bold text-center">Live Viewer</h3>
+                                <p class="text-slate-400 text-sm">Follow along a live flight session with real-time telemetry.</p>
+                            </div>
+
+                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/flight_playback.jpeg', 'Flight Playback')">
+                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                    <img src="images/ios/flight_playback.jpeg" alt="Flight Playback" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
+                                </div>
+                                <h3 class="font-bold text-center">Flight Playback</h3>
+                                <p class="text-slate-400 text-sm">Replay your recorded flight path overlaid on a detailed map.</p>
+                            </div>
+
+                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/widgets.png', 'Widgets')">
+                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                    <img src="images/ios/widgets.png" alt="Widgets" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
+                                </div>
+                                <h3 class="font-bold text-center">Widgets</h3>
+                                <p class="text-slate-400 text-sm">Home screen widgets for quick access to logbook stats and live flight data.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- iPadOS -->
+                <div class="border border-slate-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleGallery('ipados')" class="w-full flex justify-between items-center px-6 py-4 bg-slate-900/50 hover:bg-slate-800/50 transition text-left">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-brands fa-apple text-slate-300 text-xl"></i>
+                            <span class="font-bold text-lg">iPadOS</span>
+                        </div>
+                        <i id="ipados-chevron" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300" style="transform: rotate(-90deg);"></i>
+                    </button>
+                    <div id="ipados-gallery" class="overflow-hidden" style="max-height: 0; transition: max-height 0.4s ease;">
+                        <div class="flex overflow-x-auto gap-8 custom-scrollbar pb-10 px-6 pt-4">
+
+                            <div class="min-w-[420px] group cursor-zoom-in" onclick="openModal('images/ipados/flight_planning.jpeg', 'Flight Planning')">
+                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                    <img src="images/ipados/flight_planning.jpeg" alt="Flight Planning" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition duration-500">
+                                </div>
+                                <h3 class="font-bold text-center">Flight Planning</h3>
+                                <p class="text-slate-400 text-sm">Plan your flights with the expanded iPad layout and side-by-side weather briefing.</p>
+                            </div>
+
+                            <div class="min-w-[420px] group cursor-zoom-in" onclick="openModal('images/ipados/flight_planning2.jpeg', 'Flight Planning (Detail)')">
+                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                    <img src="images/ipados/flight_planning2.jpeg" alt="Flight Planning Detail" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition duration-500">
+                                </div>
+                                <h3 class="font-bold text-center">Flight Planning (Detail)</h3>
+                                <p class="text-slate-400 text-sm">Detailed waypoint and weather information during flight planning.</p>
+                            </div>
+
+                            <div class="min-w-[420px] group cursor-zoom-in" onclick="openModal('images/ipados/airport_info.jpeg', 'Airport Information')">
+                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                    <img src="images/ipados/airport_info.jpeg" alt="Airport Information" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition duration-500">
+                                </div>
+                                <h3 class="font-bold text-center">Airport Information</h3>
+                                <p class="text-slate-400 text-sm">Full-screen airport data view with weather, runways, and frequencies optimised for iPad.</p>
+                            </div>
+
+                            <div class="min-w-[420px] group cursor-zoom-in" onclick="openModal('images/ipados/live_viewer.jpeg', 'Live Viewer')">
+                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
+                                    <img src="images/ipados/live_viewer.jpeg" alt="Live Viewer" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition duration-500">
+                                </div>
+                                <h3 class="font-bold text-center">Live Viewer</h3>
+                                <p class="text-slate-400 text-sm">Track live flights with the full spacious iPad display.</p>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -457,7 +601,7 @@ document.querySelectorAll('.custom-scrollbar').forEach(slider => {
     });
 });
 
-const galleryOpen = { android: true, ios: false, watch: false, wearos: false };
+const galleryOpen = { android: true, ios: false, ipados: false, watch: false, wearos: false };
 function toggleGallery(id) {
     const gallery  = document.getElementById(id + '-gallery');
     const chevron  = document.getElementById(id + '-chevron');
