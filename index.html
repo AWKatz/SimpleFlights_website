@@ -40,7 +40,7 @@
                 <a href="./tos.html" class="hover:text-white transition">TOS</a>
             </div>
             <div class="flex items-center gap-4">
-                <a href="#download" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition">Download</a>
+                <a href="#download" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition">Coming Soon</a>
                 <button id="menuBtn" class="md:hidden text-slate-400 hover:text-white transition p-1" aria-label="Open menu">
                     <i id="menuIcon" class="fa-solid fa-bars text-xl"></i>
                 </button>
@@ -78,7 +78,6 @@
                 to accomplish what I was envisioning. SimpleFlights is the result of that 
                 vision, and the countless evenings and weekends that I spent developing it.
             </p>
-            
 
         </div>
 
@@ -93,6 +92,20 @@
         </div>
     </section>
 
+    <div class="flex gap-8 justify-center">
+        <a href="#compare" class="flex flex-col items-center gap-3 group">
+            <div class="w-[180px] h-[180px] rounded-[2.5rem] overflow-hidden border border-white/10 shadow-lg group-hover:scale-105 group-hover:shadow-blue-500/20 transition duration-300">
+                <img src="images/app_icon_main.png" alt="SimpleFlights" class="w-full h-full object-cover">
+            </div>
+            <span class="text-sm font-semibold text-slate-400 group-hover:text-white transition">SimpleFlights</span>
+        </a>
+        <a href="#compare" class="flex flex-col items-center gap-3 group">
+            <div class="w-[180px] h-[180px] rounded-[2.5rem] overflow-hidden border border-white/10 shadow-lg group-hover:scale-105 group-hover:shadow-blue-500/20 transition duration-300">
+                <img src="images/app_icon_viewer.png" alt="SimpleFlights Viewer" class="w-full h-full object-cover">
+            </div>
+            <span class="text-sm font-semibold text-slate-400 group-hover:text-white transition">Viewer</span>
+        </a>
+    </div>
 
     <!--MAIN FEATURES-->
     <section id="features" class="max-w-7xl mx-auto px-6 py-24">
@@ -163,7 +176,9 @@
                     <button onclick="toggleGallery('android')" class="w-full flex justify-between items-center px-6 py-4 bg-slate-900/50 hover:bg-slate-800/50 transition text-left">
                         <div class="flex items-center gap-3">
                             <i class="fa-brands fa-android text-emerald-400 text-xl"></i>
-                            <span class="font-bold text-lg">Android</span>
+                            <i class="fa-brands fa-apple text-slate-300 text-xl"></i>
+                            <i class="fa-brands fa-windows text-blue-300 text-xl"></i>
+                            <span class="font-bold text-lg">Simple Flights</span>
                         </div>
                         <i id="android-chevron" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
                     </button>
@@ -256,7 +271,7 @@
                                         <img src="images/android/Flight_Viewer.png" alt="Flight Viewer" class="w-full aspect-[9/16] object-cover group-hover:scale-105 transition duration-500">
                                     </div>
                                     <h3 class="font-bold text-center">Flight Viewer</h3>
-                                    <p class="text-slate-400">Join live flight sessions and view real-time telemetry using our simple peer to peer network.</p>
+                                    <p class="text-slate-400">Join live flight sessions from other SimpleFlights users and view real-time telemetry and flight data.</p>
                                 </div>
                             </div>
 
@@ -268,8 +283,10 @@
                 <div class="border border-slate-800 rounded-2xl overflow-hidden">
                     <button onclick="toggleGallery('ios')" class="w-full flex justify-between items-center px-6 py-4 bg-slate-900/50 hover:bg-slate-800/50 transition text-left">
                         <div class="flex items-center gap-3">
+                            <i class="fa-brands fa-android text-emerald-400 text-xl"></i>
                             <i class="fa-brands fa-apple text-slate-300 text-xl"></i>
-                            <span class="font-bold text-lg">iOS</span>
+                            <i class="fa-brands fa-windows text-blue-300 text-xl"></i>
+                            <span class="font-bold text-lg">SimpleFlights Viewer</span>
                         </div>
                         <i id="ios-chevron" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300" style="transform: rotate(-90deg);"></i>
                     </button>
@@ -376,54 +393,6 @@
                     </div>
                 </div>
 
-                <!-- iPadOS -->
-                <div class="border border-slate-800 rounded-2xl overflow-hidden">
-                    <button onclick="toggleGallery('ipados')" class="w-full flex justify-between items-center px-6 py-4 bg-slate-900/50 hover:bg-slate-800/50 transition text-left">
-                        <div class="flex items-center gap-3">
-                            <i class="fa-brands fa-apple text-slate-300 text-xl"></i>
-                            <span class="font-bold text-lg">iPadOS</span>
-                        </div>
-                        <i id="ipados-chevron" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300" style="transform: rotate(-90deg);"></i>
-                    </button>
-                    <div id="ipados-gallery" class="overflow-hidden" style="max-height: 0; transition: max-height 0.4s ease;">
-                        <div class="flex overflow-x-auto gap-8 custom-scrollbar pb-10 px-6 pt-4">
-
-                            <div class="min-w-[420px] group cursor-zoom-in" onclick="openModal('images/ipados/flight_planning.jpeg', 'Flight Planning')">
-                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                    <img src="images/ipados/flight_planning.jpeg" alt="Flight Planning" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition duration-500">
-                                </div>
-                                <h3 class="font-bold text-center">Flight Planning</h3>
-                                <p class="text-slate-400 text-sm">Plan your flights with the expanded iPad layout and side-by-side weather briefing.</p>
-                            </div>
-
-                            <div class="min-w-[420px] group cursor-zoom-in" onclick="openModal('images/ipados/flight_planning2.jpeg', 'Flight Planning (Detail)')">
-                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                    <img src="images/ipados/flight_planning2.jpeg" alt="Flight Planning Detail" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition duration-500">
-                                </div>
-                                <h3 class="font-bold text-center">Flight Planning (Detail)</h3>
-                                <p class="text-slate-400 text-sm">Detailed waypoint and weather information during flight planning.</p>
-                            </div>
-
-                            <div class="min-w-[420px] group cursor-zoom-in" onclick="openModal('images/ipados/airport_info.jpeg', 'Airport Information')">
-                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                    <img src="images/ipados/airport_info.jpeg" alt="Airport Information" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition duration-500">
-                                </div>
-                                <h3 class="font-bold text-center">Airport Information</h3>
-                                <p class="text-slate-400 text-sm">Full-screen airport data view with weather, runways, and frequencies optimised for iPad.</p>
-                            </div>
-
-                            <div class="min-w-[420px] group cursor-zoom-in" onclick="openModal('images/ipados/live_viewer.jpeg', 'Live Viewer')">
-                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                    <img src="images/ipados/live_viewer.jpeg" alt="Live Viewer" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition duration-500">
-                                </div>
-                                <h3 class="font-bold text-center">Live Viewer</h3>
-                                <p class="text-slate-400 text-sm">Track live flights with the full spacious iPad display.</p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Apple Watch -->
                 <div class="border border-slate-800 rounded-2xl overflow-hidden">
                     <button onclick="toggleGallery('watch')" class="w-full flex justify-between items-center px-6 py-4 bg-slate-900/50 hover:bg-slate-800/50 transition text-left">
@@ -465,7 +434,7 @@
                                 <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
                                     <img src="images/androidwear/#.png" alt="Android Wear App" class="w-full watch-img group-hover:scale-105 transition duration-500">
                                 </div>
-                                <h3 class="font-bold text-center">Stats At a Glance</h3>
+                                <h3 class="font-bold text-center">Stats At A Glance</h3>
                                 <p class="text-slate-400">SimpleFlights ships with a companion app for your Android Wear device so you can have quick access to your flight information.</p>
                             </div>
 
@@ -652,8 +621,8 @@
     <section id="download" class="max-w-7xl mx-auto px-6 py-24 border-t border-slate-900">
         <div class="flex flex-col items-center gap-12">
             <div class="text-center w-full">
-                <h2 class="text-3xl font-bold mb-2">Log your flights.</h2>
-                <p class="text-slate-400">Flight Logging available for Android, iOS and Cellular enabled devices</p>
+                <h2 class="text-3xl font-bold mb-2">SimpleFlights</h2>
+                <p class="text-slate-400">The simple alternative! All features available for Android, iOS and Cellular enabled devices</p>
                 <br>
                 <div class="flex flex-wrap gap-4 justify-center">
                 <button class="bg-slate-800 hover:bg-slate-700 px-6 py-2 rounded-xl flex items-center gap-3 font-bold transition">
@@ -673,8 +642,8 @@
                 </button>
                 </div>
                 <br>
-                <h2 class="text-3xl font-bold mb-2">Follow along from anywhere.</h2>
-                <p class="text-slate-400">SimpleFlights Viewer</p>
+                <h2 class="text-3xl font-bold mb-2">SimpleFlights Viewer</h2>
+                <p class="text-slate-400">The best way to view shared flight session from other SimpleFlights users.</p>
                 <br>
                 <div class="flex flex-wrap gap-4 justify-center">
                 <button class="bg-slate-800 hover:bg-slate-700 px-6 py-2 rounded-xl flex items-center gap-3 font-bold transition">
