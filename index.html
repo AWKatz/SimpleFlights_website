@@ -27,7 +27,7 @@
     <nav class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-lg border-b border-slate-800/50">
         <div class="flex justify-between items-center p-4 max-w-7xl mx-auto">
             <div class="text-xl font-bold tracking-tighter flex items-center gap-2">
-                <i class="fa-solid fa-plane-tail text-blue-400"></i> SimpleFlights <img src="images/app_icon_48.png"></img>
+                <i class="fa-solid fa-plane-tail text-blue-400"></i> SimpleFlights <img src="images/app_icon_32.png"></img>
             </div>
             <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
                 <a href="#features" class="hover:text-white transition">Features</a>
@@ -68,15 +68,9 @@
                 Your logbook.<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Your flights.</span><br>Simplified.
             </h1>
             <p class="text-lg text-slate-400 max-w-lg mx-auto lg:mx-0">
-                SimpleFlights originally began as a complex Apple Shortcut group of 
-                actions that I created to help me early on in my flight training. 
-                Not only did it help me fill out my logbook and PTR, but it also 
-                gave me a way to share my flight progress with friends and family. 
-                As my hours started to grow, so did my need to have more functionality,
-                but hitting the limits of what the Shortcut could do, I decided leverage my 
-                development background to start from the ground up with a dedicated app 
-                to accomplish what I was envisioning. SimpleFlights is the result of that 
-                vision, and the countless evenings and weekends that I spent developing it.
+                SimpleFlights began as a complex Shortcut workflow tool designed to streamline my early flight training, to manage logbooks and Pilot Training Records (PTR) quickly evolved alongside my flying hours.
+                As my hours and flight experience grew, I recognized that I needed something to help suppliment my pre-flight routine and my lesson debriefings with my instructors. Without wanting to commit to a subscrition for the traditional apps, 
+                I opted to leverage my background in software development and started building a set of tools that could help bridge the gap for my training while giving me the ability to share my progress with friends and family as well.
             </p>
 
         </div>
@@ -293,100 +287,28 @@
                     <div id="ios-gallery" class="overflow-hidden" style="max-height: 0; transition: max-height 0.4s ease;">
                         <div class="flex overflow-x-auto gap-8 custom-scrollbar pb-10 px-6 pt-4">
 
-                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/flight_log.jpeg', 'Flight Log')">
-                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                    <img src="images/ios/flight_log.jpeg" alt="Flight Log" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
-                                </div>
-                                <h3 class="font-bold text-center">Flight Log</h3>
-                                <p class="text-slate-400 text-sm">Keep a detailed log of every flight with times, routes, and notes.</p>
-                            </div>
-
-                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/pre_flight.jpeg', 'Pre-Flight')">
-                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                    <img src="images/ios/pre_flight.jpeg" alt="Pre-Flight" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
-                                </div>
-                                <h3 class="font-bold text-center">Pre-Flight</h3>
-                                <p class="text-slate-400 text-sm">Run through pre-flight checks and review aircraft details before departure.</p>
-                            </div>
-
-                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/saved_aircraft.jpeg', 'Saved Aircraft')">
-                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                    <img src="images/ios/saved_aircraft.jpeg" alt="Saved Aircraft" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
-                                </div>
-                                <h3 class="font-bold text-center">Saved Aircraft</h3>
-                                <p class="text-slate-400 text-sm">Browse and manage your fleet of saved aircraft profiles.</p>
-                            </div>
-
-                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/edit_aircraft.jpeg', 'Edit Aircraft')">
-                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                    <img src="images/ios/edit_aircraft.jpeg" alt="Edit Aircraft" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
-                                </div>
-                                <h3 class="font-bold text-center">Edit Aircraft</h3>
-                                <p class="text-slate-400 text-sm">Update aircraft profiles including W&amp;B and performance data.</p>
-                            </div>
-
-                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/range_estimates.jpeg', 'Range Estimates')">
-                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                    <img src="images/ios/range_estimates.jpeg" alt="Range Estimates" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
-                                </div>
-                                <h3 class="font-bold text-center">Range Estimates</h3>
-                                <p class="text-slate-400 text-sm">Calculate your aircraft's range and fuel requirements for the planned route.</p>
-                            </div>
-
-                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/flight_planning.jpeg', 'Flight Planning')">
-                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                    <img src="images/ios/flight_planning.jpeg" alt="Flight Planning" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
-                                </div>
-                                <h3 class="font-bold text-center">Flight Planning</h3>
-                                <p class="text-slate-400 text-sm">Plan your cross-country routes with METAR, TAF, and enroute estimates.</p>
-                            </div>
-
-                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/airport_info.jpeg', 'Airport Information')">
-                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                    <img src="images/ios/airport_info.jpeg" alt="Airport Information" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
-                                </div>
-                                <h3 class="font-bold text-center">Airport Information</h3>
-                                <p class="text-slate-400 text-sm">Access real-time weather, frequencies, and runway data for any airport.</p>
-                            </div>
-
-                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/airport_map.jpeg', 'Airport Map')">
-                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                    <img src="images/ios/airport_map.jpeg" alt="Airport Map" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
-                                </div>
-                                <h3 class="font-bold text-center">Airport Map</h3>
-                                <p class="text-slate-400 text-sm">View detailed airport maps with runway overlays and navigation aids.</p>
-                            </div>
-
-                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/live_tracking.jpeg', 'Live Tracking')">
-                                <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                    <img src="images/ios/live_tracking.jpeg" alt="Live Tracking" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
-                                </div>
-                                <h3 class="font-bold text-center">Live Tracking</h3>
-                                <p class="text-slate-400 text-sm">Broadcast your position in real-time to passengers or people following from home.</p>
-                            </div>
-
                             <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/live_viewer.jpeg', 'Live Viewer')">
                                 <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
                                     <img src="images/ios/live_viewer.jpeg" alt="Live Viewer" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
                                 </div>
-                                <h3 class="font-bold text-center">Live Viewer</h3>
+                                <h3 class="font-bold text-center">Live Viewer on your Phone</h3>
                                 <p class="text-slate-400 text-sm">Follow along a live flight session with real-time telemetry.</p>
                             </div>
 
-                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/flight_playback.jpeg', 'Flight Playback')">
+                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ipados/live_viewer.jpeg', 'Live Viewer')">
                                 <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                    <img src="images/ios/flight_playback.jpeg" alt="Flight Playback" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
+                                    <img src="images/ipados/live_viewer.jpeg" alt="Live Viewer" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
                                 </div>
-                                <h3 class="font-bold text-center">Flight Playback</h3>
-                                <p class="text-slate-400 text-sm">Replay your recorded flight path overlaid on a detailed map.</p>
+                                <h3 class="font-bold text-center">Live Viewer on your Tablet</h3>
+                                <p class="text-slate-400 text-sm">Follow along a live flight session with real-time telemetry.</p>
                             </div>
 
-                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ios/widgets.png', 'Widgets')">
+                            <div class="min-w-[280px] group cursor-zoom-in" onclick="openModal('images/ipados/live_viewer.jpeg', 'Live Viewer')">
                                 <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                    <img src="images/ios/widgets.png" alt="Widgets" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
+                                    <img src="images/ipados/live_viewer.jpeg" alt="Live Viewer" class="w-full aspect-[9/19] object-cover group-hover:scale-105 transition duration-500">
                                 </div>
-                                <h3 class="font-bold text-center">Widgets</h3>
-                                <p class="text-slate-400 text-sm">Home screen widgets for quick access to logbook stats and live flight data.</p>
+                                <h3 class="font-bold text-center">Live Viewer on your TV or PC</h3>
+                                <p class="text-slate-400 text-sm">Follow along a live flight session with real-time telemetry.</p>
                             </div>
 
                         </div>
@@ -430,9 +352,9 @@
                     <div id="wearos-gallery" class="overflow-hidden" style="max-height: 0; transition: max-height 0.4s ease;">
                         <div class="flex overflow-x-auto gap-8 custom-scrollbar pb-10 px-6 pt-4">
                             <!-- Wear OS screenshots go here -->
-                                <div class="w-[220px] flex-shrink-0 group cursor-zoom-in" onclick="openModal('images/androidwear/#.png', 'Android Wear App')">
+                                <div class="w-[220px] flex-shrink-0 group cursor-zoom-in" onclick="openModal('images/androidwear/watch_media_2026-05-29_09_17_19.png', 'Android Wear App')">
                                 <div class="rounded-[2rem] overflow-hidden border border-white/10 mb-4 shadow-xl">
-                                    <img src="images/androidwear/#.png" alt="Android Wear App" class="w-full watch-img group-hover:scale-105 transition duration-500">
+                                    <img src="images/androidwear/watch_media_2026-05-29_09_17_19.png" alt="Android Wear App" class="w-full watch-img group-hover:scale-105 transition duration-500">
                                 </div>
                                 <h3 class="font-bold text-center">Stats At A Glance</h3>
                                 <p class="text-slate-400">SimpleFlights ships with a companion app for your Android Wear device so you can have quick access to your flight information.</p>
