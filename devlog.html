@@ -64,7 +64,7 @@
                 if (!res.ok) throw new Error();
 
                 const md = await res.text();
-                const sections = md.split('##').filter(s => s.trim()).reverse();
+                const sections = md.split('##').filter(s => s.trim());
                 let html = '';
 
                 sections.forEach((section, i) => {
